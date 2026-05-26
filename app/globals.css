@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0B0B0E;
+  --surface: #121214;
+  --surface-2: #1A1A1E;
+  --accent: #14B8A6;
+  --accent-light: #5EEAD4;
+  --accent-dark: #0F766E;
+  --text: #FFFFFF;
+  --text-secondary: #A1A1AA;
+  --text-muted: #71717A;
+}
+
+body {
+  font-feature-settings: "ss01", "ss02", "cv01";
+}
+
+/* Premium Cinematic Design System */
+.section {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.section-title {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.section-title {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-title.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card {
+  @apply bg-surface border border-white/10 rounded-2xl p-8 transition-all duration-300;
+}
+
+.card:hover {
+  @apply border-accent/40 bg-surface-2;
+  transform: translateY(-2px);
+}
+
+.nav-link {
+  @apply relative text-sm font-medium text-text-secondary transition-colors hover:text-text;
+}
+
+.nav-link:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--accent);
+  transition: width 0.2s ease;
+}
+
+.nav-link:hover:after {
+  width: 100%;
+}
+
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Premium Button Styles */
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-8 py-3.5 text-sm font-semibold text-bg transition-all hover:bg-accent-light active:scale-[0.97];
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-8 py-3.5 text-sm font-semibold text-text backdrop-blur-sm transition-all hover:bg-white/10 hover:border-white/30 active:scale-[0.97];
+}
+
+.btn-ghost {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-sm font-medium text-text-secondary transition-colors hover:text-text hover:bg-white/5 active:bg-white/10;
+}
+
+/* Floating Action Buttons */
+.fab {
+  @apply fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-accent text-bg shadow-2xl shadow-accent/30 transition-all hover:scale-105 active:scale-95 md:hidden;
+}
+
+/* Gallery Filter Buttons */
+.filter-btn {
+  @apply rounded-full border border-white/10 px-5 py-2 text-sm font-medium text-text-secondary transition-all;
+}
+
+.filter-btn:hover {
+  @apply border-white/30 text-white;
+}
+
+.filter-btn.active {
+  @apply border-accent bg-accent text-bg shadow-sm shadow-accent/20 scale-[1.02];
+}
+
+/* Lightbox */
+.lightbox {
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Process Steps */
+.process-step {
+  @apply relative pl-16;
+}
+
+.process-step:not(:last-child):before {
+  content: '';
+  position: absolute;
+  left: 29px;
+  top: 64px;
+  bottom: -32px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+}
+
+/* Testimonials */
+.testimonial {
+  @apply bg-surface border border-white/10 rounded-2xl p-8;
+}
+
+/* Form Styles */
+.input {
+  @apply w-full rounded-xl border border-white/10 bg-surface px-5 py-3.5 text-text placeholder:text-text-muted focus:border-accent focus:outline-none transition-colors;
+}
+
+.select {
+  @apply w-full rounded-xl border border-white/10 bg-surface px-5 py-3.5 text-text focus:border-accent focus:outline-none transition-colors appearance-none;
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+  .section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}

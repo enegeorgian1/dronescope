@@ -174,7 +174,7 @@ function Process() {
 // ==================== MAIN PAGE ====================
 export default function DroneScopeWebsite() {
   return (
-    <main>
+    <main id="main-content">
       <Hero />
       <About />
       <Services />

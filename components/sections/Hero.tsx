@@ -81,13 +81,15 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <button
+            type="button"
             onClick={scrollToPortfolio}
             className="btn-primary text-base px-10 py-4 group flex items-center justify-center gap-3"
           >
             VEZI PORTFOLIUL
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition" />
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition" aria-hidden="true" />
           </button>
           <button
+            type="button"
             onClick={openWhatsApp}
             className="btn-secondary text-base px-10 py-4"
           >

@@ -169,10 +169,11 @@ export default function Testimonials() {
             <div className="flex gap-2">
               {testimonials.map((_, index) => (
                 <button
+                  type="button"
                   key={index}
                   onClick={() => goTo(index)}
                   className={`h-1.5 rounded-full transition-all duration-300 ${index === currentIndex ? "w-8 bg-accent" : "w-4 bg-white/20 hover:bg-white/40"}`}
-                  aria-label={`Go to testimonial ${index + 1}`}
+                  aria-label={`Mergi la testimonialul ${index + 1}`}
                 />
               ))}
             </div>
@@ -180,18 +181,20 @@ export default function Testimonials() {
             {/* Arrows */}
             <div className="flex gap-2">
               <button
+                type="button"
                 onClick={goToPrevious}
                 className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white/70 transition hover:border-accent hover:text-accent"
-                aria-label="Previous testimonial"
+                aria-label="Testimonialul anterior"
               >
-                <ChevronLeft className="w-5 h-5" />
+                <ChevronLeft className="w-5 h-5" aria-hidden="true" />
               </button>
               <button
+                type="button"
                 onClick={goToNext}
                 className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white/70 transition hover:border-accent hover:text-accent"
-                aria-label="Next testimonial"
+                aria-label="Testimonialul următor"
               >
-                <ChevronRight className="w-5 h-5" />
+                <ChevronRight className="w-5 h-5" aria-hidden="true" />
               </button>
             </div>
           </div>

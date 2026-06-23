@@ -126,15 +126,17 @@ export default function Contact() {
                   </p>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+                <form onSubmit={handleSubmit(onSubmit)} className="space-y-5" aria-label="Formular de contact">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     {/* Nume */}
                     <div>
-                      <label className="block text-sm font-medium mb-2 text-text-secondary">Nume complet</label>
+                      <label htmlFor="contact-name" className="block text-sm font-medium mb-2 text-text-secondary">Nume complet</label>
                       <input
+                        id="contact-name"
                         {...register("name")}
                         type="text"
                         placeholder="Ion Popescu"
+                        autoComplete="name"
                         className="input"
                       />
                       {errors.name && <p className="text-red-400 text-xs mt-1.5">{errors.name.message}</p>}
@@ -142,11 +144,13 @@ export default function Contact() {
 
                     {/* Email */}
                     <div>
-                      <label className="block text-sm font-medium mb-2 text-text-secondary">Email</label>
+                      <label htmlFor="contact-email" className="block text-sm font-medium mb-2 text-text-secondary">Email</label>
                       <input
+                        id="contact-email"
                         {...register("email")}
                         type="email"
                         placeholder="ion.popescu@email.com"
+                        autoComplete="email"
                         className="input"
                       />
                       {errors.email && <p className="text-red-400 text-xs mt-1.5">{errors.email.message}</p>}
@@ -156,11 +160,13 @@ export default function Contact() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     {/* Telefon */}
                     <div>
-                      <label className="block text-sm font-medium mb-2 text-text-secondary">Telefon / WhatsApp</label>
+                      <label htmlFor="contact-phone" className="block text-sm font-medium mb-2 text-text-secondary">Telefon / WhatsApp</label>
                       <input
+                        id="contact-phone"
                         {...register("phone")}
                         type="tel"
                         placeholder="0729 626 932"
+                        autoComplete="tel"
                         className="input"
                       />
                       {errors.phone && <p className="text-red-400 text-xs mt-1.5">{errors.phone.message}</p>}
@@ -168,8 +174,8 @@ export default function Contact() {
 
                     {/* Tip serviciu */}
                     <div>
-                      <label className="block text-sm font-medium mb-2 text-text-secondary">Tip de serviciu</label>
-                      <select {...register("service")} className="select">
+                      <label htmlFor="contact-service" className="block text-sm font-medium mb-2 text-text-secondary">Tip de serviciu</label>
+                      <select id="contact-service" {...register("service")} className="select">
                         <option value="">Selectează...</option>
                         {serviceOptions.map((opt) => (
                           <option key={opt} value={opt}>
@@ -183,10 +189,11 @@ export default function Contact() {
 
                   {/* Data preferată */}
                   <div>
-                    <label className="block text-sm font-medium mb-2 text-text-secondary">
+                    <label htmlFor="contact-date" className="block text-sm font-medium mb-2 text-text-secondary">
                       Data preferată (opțional)
                     </label>
                     <input
+                      id="contact-date"
                       {...register("preferredDate")}
                       type="date"
                       className="input"
@@ -195,8 +202,9 @@ export default function Contact() {
 
                   {/* Mesaj */}
                   <div>
-                    <label className="block text-sm font-medium mb-2 text-text-secondary">Mesaj / Detalii proiect</label>
+                    <label htmlFor="contact-message" className="block text-sm font-medium mb-2 text-text-secondary">Mesaj / Detalii proiect</label>
                     <textarea
+                      id="contact-message"
                       {...register("message")}
                       rows={5}
                       placeholder="Vreau filmări aeriene pentru o vilă de lux în Mamaia Nord..."
@@ -212,13 +220,13 @@ export default function Contact() {
                   >
                     {isLoading ? (
                       <>
-                        <Loader2 className="w-4 h-4 animate-spin" />
+                        <Loader2 className="w-4 h-4 animate-spin" aria-hidden="true" />
                         Se trimite...
                       </>
                     ) : (
                       <>
                         TRIMITE MESAJUL
-                        <Send className="w-4 h-4" />
+                        <Send className="w-4 h-4" aria-hidden="true" />
                       </>
                     )}
                   </button>

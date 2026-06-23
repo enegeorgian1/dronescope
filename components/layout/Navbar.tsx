@@ -51,7 +51,8 @@ export default function Navbar() {
 
   return (
     <nav
-  className={`fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300 ${
+      aria-label="Navigare principală"
+      className={`fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300 ${
     scrolled
       ? "border-white/15 bg-bg/95 backdrop-blur-2xl shadow-lg shadow-black/20"
       : "border-white/10 bg-bg/80 backdrop-blur-xl"
@@ -59,7 +60,12 @@ export default function Navbar() {
 >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
         {/* Logo */}
-        <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center pr-2 md:pr-4">
+        <button
+          type="button"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="flex items-center pr-2 md:pr-4"
+          aria-label="Drone Scope — mergi la începutul paginii"
+        >
           <DroneLogo size={28} />
         </button>
 
@@ -67,6 +73,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-10">
           {navLinks.map((link) => (
             <button
+              type="button"
               key={link.href}
               onClick={() => scrollTo(link.href)}
               className="nav-link text-sm"
@@ -79,25 +86,29 @@ export default function Navbar() {
         {/* Desktop CTAs */}
         <div className="hidden md:flex items-center gap-3">
           <button
+            type="button"
             onClick={callPhone}
             className="btn-ghost flex items-center gap-2"
           >
-            <Phone className="w-4 h-4" />
+            <Phone className="w-4 h-4" aria-hidden="true" />
             0729 626 932
           </button>
-          <button onClick={openWhatsApp} className="btn-primary">
-            <MessageCircle className="w-4 h-4" />
+          <button type="button" onClick={openWhatsApp} className="btn-primary">
+            <MessageCircle className="w-4 h-4" aria-hidden="true" />
             WhatsApp
           </button>
         </div>
 
         {/* Mobile Menu Button */}
         <button
+          type="button"
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden p-2 text-text-secondary"
-          aria-label="Toggle menu"
+          aria-label={isOpen ? "Închide meniul" : "Deschide meniul"}
+          aria-expanded={isOpen}
+          aria-controls="mobile-navigation"
         >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+          {isOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
         </button>
       </div>
 
@@ -108,11 +119,13 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
+            id="mobile-navigation"
             className="md:hidden border-t border-white/10 bg-bg"
           >
             <div className="px-6 py-8 flex flex-col gap-6 text-lg">
               {navLinks.map((link) => (
                 <button
+                  type="button"
                   key={link.href}
                   onClick={() => scrollTo(link.href)}
                   className="text-left text-text-secondary active:text-text"
@@ -123,13 +136,14 @@ export default function Navbar() {
 
               <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
                 <button
+                  type="button"
                   onClick={callPhone}
                   className="btn-secondary justify-center"
                 >
-                  <Phone className="w-4 h-4" /> 0729 626 932
+                  <Phone className="w-4 h-4" aria-hidden="true" /> 0729 626 932
                 </button>
-                <button onClick={openWhatsApp} className="btn-primary justify-center">
-                  <MessageCircle className="w-4 h-4" /> Scrie-ne pe WhatsApp
+                <button type="button" onClick={openWhatsApp} className="btn-primary justify-center">
+                  <MessageCircle className="w-4 h-4" aria-hidden="true" /> Scrie-ne pe WhatsApp
                 </button>
               </div>
             </div>

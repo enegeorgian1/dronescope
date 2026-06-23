@@ -3,9 +3,10 @@ import React from "react";
 interface DroneLogoProps {
   className?: string;
   size?: number;
+  decorative?: boolean;
 }
 
-export default function DroneLogo({ className = "", size = 32 }: DroneLogoProps) {
+export default function DroneLogo({ className = "", size = 32, decorative = true }: DroneLogoProps) {
   return (
     <svg
       width={size * 5.8}
@@ -14,6 +15,9 @@ export default function DroneLogo({ className = "", size = 32 }: DroneLogoProps)
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      role={decorative ? "presentation" : "img"}
+      aria-hidden={decorative}
+      aria-label={decorative ? undefined : "Drone Scope"}
     >
       {/* Stylized drone + lens icon */}
       <g>

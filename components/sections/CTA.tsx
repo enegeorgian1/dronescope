@@ -42,17 +42,19 @@ export default function CTA() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
+                type="button"
                 onClick={scrollToContact}
                 className="btn-primary text-base px-10 py-4 group flex items-center justify-center gap-3"
               >
                 SOLICITĂ OFERTĂ
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition" />
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition" aria-hidden="true" />
               </button>
               <button
+                type="button"
                 onClick={openWhatsApp}
                 className="btn-secondary text-base px-10 py-4 flex items-center justify-center gap-2"
               >
-                <MessageCircle className="w-4 h-4" />
+                <MessageCircle className="w-4 h-4" aria-hidden="true" />
                 WhatsApp
               </button>
             </div>

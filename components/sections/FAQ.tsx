@@ -37,11 +37,15 @@ export default function FAQ() {
                 className="border border-white/10 rounded-2xl overflow-hidden bg-bg"
               >
                 <button
+                  type="button"
+                  id={`faq-question-${index}`}
                   onClick={() => toggle(index)}
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${index}`}
                   className="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-white/5 transition-colors"
                 >
                   <span className="text-lg font-medium pr-8">{faq.question}</span>
-                  <span className="text-accent shrink-0">
+                  <span className="text-accent shrink-0" aria-hidden="true">
                     {isOpen ? <Minus size={20} /> : <Plus size={20} />}
                   </span>
                 </button>
@@ -55,7 +59,12 @@ export default function FAQ() {
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                       className="overflow-hidden"
                     >
-                      <div className="px-6 pb-6 text-text-secondary leading-relaxed text-[15px]">
+                      <div
+                        id={`faq-answer-${index}`}
+                        role="region"
+                        aria-labelledby={`faq-question-${index}`}
+                        className="px-6 pb-6 text-text-secondary leading-relaxed text-[15px]"
+                      >
                         {faq.answer}
                       </div>
                     </motion.div>

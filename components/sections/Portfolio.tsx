@@ -76,8 +76,10 @@ export default function Portfolio() {
         <div className="flex flex-wrap gap-2 mb-10">
           {categories.map((cat) => (
             <button
+              type="button"
               key={cat}
               onClick={() => setActiveFilter(cat)}
+              aria-pressed={activeFilter === cat}
               className={`filter-btn ${activeFilter === cat ? "active" : ""}`}
             >
               {cat}
@@ -89,7 +91,8 @@ export default function Portfolio() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           <AnimatePresence>
             {filteredProjects.map((project, index) => (
-              <motion.div
+              <motion.button
+                type="button"
                 key={project.id}
                 layout
                 initial={{ opacity: 0, scale: 0.96, y: 20 }}
@@ -97,14 +100,16 @@ export default function Portfolio() {
                 exit={{ opacity: 0, scale: 0.96, y: 10 }}
                 transition={{ duration: 0.3, delay: Math.min(index * 0.03, 0.3) }}
                 onClick={() => openLightbox(project)}
-                className="group relative aspect-[16/10] overflow-hidden rounded-2xl cursor-pointer bg-surface-2 border border-white/10 transition-all duration-300 hover:border-white/30 hover:shadow-2xl"
+                aria-label={`${project.videoUrl ? "Redă video" : "Vezi proiectul"}: ${project.title}, ${project.location}`}
+                className="group relative aspect-[16/10] overflow-hidden rounded-2xl cursor-pointer bg-surface-2 border border-white/10 transition-all duration-300 hover:border-white/30 hover:shadow-2xl text-left w-full"
               >
                 <Image
                   src={project.image}
-                  alt={`${project.title} — filmare aeriană ${project.category} în ${project.location}, Drone Scope`}
+                  alt=""
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover transition-all duration-700 group-hover:scale-[1.08]"
+                  aria-hidden="true"
                 />
 
                 {/* Gradient overlay */}
@@ -129,16 +134,16 @@ export default function Portfolio() {
                     {project.title}
                   </h3>
                   <div className="flex items-center text-sm text-white/80">
-                    <MapPin className="w-3.5 h-3.5 mr-1.5" />
+                    <MapPin className="w-3.5 h-3.5 mr-1.5" aria-hidden="true" />
                     {project.location}
                   </div>
                 </div>
 
                 {/* Hover badge */}
-                <div className="absolute top-5 right-5 px-4 py-1 rounded-full bg-black/60 text-white text-xs tracking-widest border border-white/20 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <div className="absolute top-5 right-5 px-4 py-1 rounded-full bg-black/60 text-white text-xs tracking-widest border border-white/20 opacity-0 group-hover:opacity-100 transition-all duration-300" aria-hidden="true">
                   {project.videoUrl ? "REDA VIDEO" : "VEZI PROIECTUL"}
                 </div>
-              </motion.div>
+              </motion.button>
             ))}
           </AnimatePresence>
         </div>
@@ -152,6 +157,9 @@ export default function Portfolio() {
       <AnimatePresence>
          {selectedProject && (
           <motion.div
+            role="dialog"
+            aria-modal="true"
+            aria-label={`Galerie: ${selectedProject.title}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -169,10 +177,12 @@ export default function Portfolio() {
             >
               {/* Close button */}
               <button
+                type="button"
                 onClick={closeLightbox}
                 className="absolute -top-12 right-0 md:right-0 text-white/70 hover:text-white transition z-50"
+                aria-label="Închide galeria"
               >
-                <X size={28} />
+                <X size={28} aria-hidden="true" />
               </button>
 
               {/* Main Media (Image or Video) */}
@@ -185,6 +195,7 @@ export default function Portfolio() {
                     className="w-full h-full object-cover"
                     autoPlay
                     muted
+                    aria-label={`Video: ${selectedProject.title}`}
                   />
                 ) : (
                   <Image
@@ -201,16 +212,20 @@ export default function Portfolio() {
                 {filteredProjects.length > 1 && (
                   <>
                     <button
+                      type="button"
                       onClick={() => goToProject(-1)}
                       className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full transition"
+                      aria-label="Proiectul anterior"
                     >
-                      <ChevronLeft size={24} />
+                      <ChevronLeft size={24} aria-hidden="true" />
                     </button>
                     <button
+                      type="button"
                       onClick={() => goToProject(1)}
                       className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full transition"
+                      aria-label="Proiectul următor"
                     >
-                      <ChevronRight size={24} />
+                      <ChevronRight size={24} aria-hidden="true" />
                     </button>
                   </>
                 )}

@@ -14,13 +14,15 @@ export async function POST(request: Request) {
     console.log("Message:", message);
 
     // Trimitem email doar dacă avem cheia Resend
+    // NOTĂ: Notificările formularului merg pe Gmail (enegeorgian1@gmail.com)
+    // pentru fiabilitate. contact@dronescope.ro este folosit doar manual/conversational.
     if (process.env.RESEND_API_KEY) {
       try {
         const { Resend } = await import("resend");
         const resend = new Resend(process.env.RESEND_API_KEY);
 
         await resend.emails.send({
-          from: "Drone Scope <no-reply@dronescope.ro>",
+          from: "Drone Scope <onboarding@resend.dev>",
           to: "enegeorgian1@gmail.com",
           subject: `Cerere nouă de la ${name} - ${service}`,
           replyTo: email,

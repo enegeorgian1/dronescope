@@ -12,6 +12,8 @@ const inter = Inter({
   variable: "--font-inter",
   weight: ["400", "500", "600", "700"],
   display: "swap",
+  preload: true,
+  adjustFontFallback: true,
 });
 
 export const viewport: Viewport = {

@@ -108,6 +108,8 @@ export default function Portfolio() {
                   alt=""
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  quality={70}
+                  loading="lazy"
                   className="object-cover transition-all duration-700 group-hover:scale-[1.08]"
                   aria-hidden="true"
                 />

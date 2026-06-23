@@ -60,14 +60,18 @@ export default function Navbar() {
 >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
         {/* Logo */}
-        <button
-          type="button"
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        <a
+          href="/"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
           className="flex items-center pr-2 md:pr-4"
           aria-label="Drone Scope — mergi la începutul paginii"
         >
+          <span className="sr-only">Drone Scope</span>
           <DroneLogo size={28} />
-        </button>
+        </a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-10">

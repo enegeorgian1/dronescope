@@ -128,88 +128,96 @@ export default function Contact() {
               ) : (
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-5" aria-label="Formular de contact">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    {/* Nume */}
                     <div>
-                      <label htmlFor="contact-name" className="block text-sm font-medium mb-2 text-text-secondary">Nume complet</label>
-                      <input
-                        id="contact-name"
-                        {...register("name")}
-                        type="text"
-                        placeholder="Ion Popescu"
-                        autoComplete="name"
-                        className="input"
-                      />
+                      <label className="block">
+                        <span className="block text-sm font-medium mb-2 text-text-secondary">Nume complet</span>
+                        <input
+                          {...register("name")}
+                          type="text"
+                          placeholder="Ion Popescu"
+                          autoComplete="name"
+                          aria-label="Nume complet"
+                          className="input w-full"
+                        />
+                      </label>
                       {errors.name && <p className="text-red-400 text-xs mt-1.5">{errors.name.message}</p>}
                     </div>
 
-                    {/* Email */}
                     <div>
-                      <label htmlFor="contact-email" className="block text-sm font-medium mb-2 text-text-secondary">Email</label>
-                      <input
-                        id="contact-email"
-                        {...register("email")}
-                        type="email"
-                        placeholder="ion.popescu@email.com"
-                        autoComplete="email"
-                        className="input"
-                      />
+                      <label className="block">
+                        <span className="block text-sm font-medium mb-2 text-text-secondary">Email</span>
+                        <input
+                          {...register("email")}
+                          type="email"
+                          placeholder="ion.popescu@email.com"
+                          autoComplete="email"
+                          aria-label="Email"
+                          className="input w-full"
+                        />
+                      </label>
                       {errors.email && <p className="text-red-400 text-xs mt-1.5">{errors.email.message}</p>}
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    {/* Telefon */}
                     <div>
-                      <label htmlFor="contact-phone" className="block text-sm font-medium mb-2 text-text-secondary">Telefon / WhatsApp</label>
-                      <input
-                        id="contact-phone"
-                        {...register("phone")}
-                        type="tel"
-                        placeholder="0729 626 932"
-                        autoComplete="tel"
-                        className="input"
-                      />
+                      <label className="block">
+                        <span className="block text-sm font-medium mb-2 text-text-secondary">Telefon / WhatsApp</span>
+                        <input
+                          {...register("phone")}
+                          type="tel"
+                          placeholder="0729 626 932"
+                          autoComplete="tel"
+                          aria-label="Telefon sau WhatsApp"
+                          className="input w-full"
+                        />
+                      </label>
                       {errors.phone && <p className="text-red-400 text-xs mt-1.5">{errors.phone.message}</p>}
                     </div>
 
-                    {/* Tip serviciu */}
                     <div>
-                      <label htmlFor="contact-service" className="block text-sm font-medium mb-2 text-text-secondary">Tip de serviciu</label>
-                      <select id="contact-service" {...register("service")} className="select">
-                        <option value="">Selectează...</option>
-                        {serviceOptions.map((opt) => (
-                          <option key={opt} value={opt}>
-                            {opt}
-                          </option>
-                        ))}
-                      </select>
+                      <label className="block">
+                        <span className="block text-sm font-medium mb-2 text-text-secondary">Tip de serviciu</span>
+                        <select
+                          {...register("service")}
+                          aria-label="Tip de serviciu"
+                          className="select w-full"
+                        >
+                          <option value="">Selectează...</option>
+                          {serviceOptions.map((opt) => (
+                            <option key={opt} value={opt}>
+                              {opt}
+                            </option>
+                          ))}
+                        </select>
+                      </label>
                       {errors.service && <p className="text-red-400 text-xs mt-1.5">{errors.service.message}</p>}
                     </div>
                   </div>
 
-                  {/* Data preferată */}
                   <div>
-                    <label htmlFor="contact-date" className="block text-sm font-medium mb-2 text-text-secondary">
-                      Data preferată (opțional)
+                    <label className="block">
+                      <span className="block text-sm font-medium mb-2 text-text-secondary">Data preferată (opțional)</span>
+                      <input
+                        {...register("preferredDate")}
+                        type="date"
+                        aria-label="Data preferată"
+                        className="input w-full"
+                      />
                     </label>
-                    <input
-                      id="contact-date"
-                      {...register("preferredDate")}
-                      type="date"
-                      className="input"
-                    />
                   </div>
 
-                  {/* Mesaj */}
                   <div>
-                    <label htmlFor="contact-message" className="block text-sm font-medium mb-2 text-text-secondary">Mesaj / Detalii proiect</label>
-                    <textarea
-                      id="contact-message"
-                      {...register("message")}
-                      rows={5}
-                      placeholder="Vreau filmări aeriene pentru o vilă de lux în Mamaia Nord..."
-                      className="input resize-y min-h-[120px]"
-                    />
+                    <label className="block">
+                      <span className="block text-sm font-medium mb-2 text-text-secondary">Mesaj / Detalii proiect</span>
+                      <textarea
+                        {...register("message")}
+                        rows={5}
+                        placeholder="Vreau filmări aeriene pentru o vilă de lux în Mamaia Nord..."
+                        aria-label="Mesaj sau detalii proiect"
+                        className="input resize-y min-h-[120px] w-full"
+                      />
+                    </label>
                     {errors.message && <p className="text-red-400 text-xs mt-1.5">{errors.message.message}</p>}
                   </div>
 

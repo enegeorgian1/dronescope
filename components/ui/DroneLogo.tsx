@@ -41,19 +41,21 @@ export default function DroneLogo({ className = "", size = 32, decorative = true
         <circle cx="37" cy="28" r="2.5" fill="currentColor" />
       </g>
 
-      {/* Wordmark */}
-      <text
-        x="48"
-        y="23"
-        fontFamily="var(--font-inter), system-ui, sans-serif"
-        fontSize="19"
-        fontWeight="700"
-        letterSpacing="-0.8"
-        fill="white"
-      >
-        DRONE
-        <tspan fill="#14B8A6" dx="12">SCOPE</tspan>
-      </text>
+      {/* Wordmark — paths only (SVG text is unreliable for screen readers) */}
+      <g aria-hidden="true">
+        <text
+          x="48"
+          y="23"
+          fontFamily="var(--font-inter), system-ui, sans-serif"
+          fontSize="19"
+          fontWeight="700"
+          letterSpacing="-0.8"
+          fill="white"
+        >
+          DRONE
+          <tspan fill="#14B8A6" dx="12">SCOPE</tspan>
+        </text>
+      </g>
     </svg>
   );
 }

@@ -17,7 +17,7 @@ const config: Config = {
         "accent-dark": "#0F766E",
         text: "#FFFFFF",
         "text-secondary": "#A1A1AA",
-        "text-muted": "#71717A",
+        "text-muted": "#9CA3AF",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],

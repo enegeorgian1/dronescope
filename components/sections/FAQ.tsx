@@ -77,10 +77,11 @@ export default function FAQ() {
 
         <div className="mt-10 text-center text-sm text-text-secondary">
           Ai o întrebare care nu apare aici?{" "}
-          <a href="#contact" className="text-accent hover:underline">
+          <a href="#contact" className="link-accessible">
             Scrie-ne direct
           </a>{" "}
-          sau sună-ne la <a href="tel:+40729626932" className="text-accent hover:underline">0729 626 932</a>.
+          sau sună-ne la{" "}
+          <a href="tel:+40729626932" className="link-accessible">0729 626 932</a>.
         </div>
       </div>
     </section>

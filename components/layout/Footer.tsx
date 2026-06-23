@@ -32,7 +32,7 @@ export default function Footer() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="block hover:text-accent transition-colors"
+                  className="block underline-offset-2 hover:text-accent-light hover:underline transition-colors"
                 >
                   {link.label}
                 </a>
@@ -42,9 +42,9 @@ export default function Footer() {
           <div>
             <div className="font-semibold mb-3">Contact</div>
             <div className="space-y-2 text-text-secondary">
-              <a href="tel:+40729626932" className="block hover:text-accent transition-colors">0729 626 932</a>
-              <a href="https://wa.me/40729626932" target="_blank" rel="noopener noreferrer" className="block hover:text-accent transition-colors">WhatsApp</a>
-              <a href="mailto:contact@dronescope.ro" className="block hover:text-accent transition-colors">contact@dronescope.ro</a>
+              <a href="tel:+40729626932" className="block underline-offset-2 hover:text-accent-light hover:underline transition-colors">0729 626 932</a>
+              <a href="https://wa.me/40729626932" target="_blank" rel="noopener noreferrer" className="block underline-offset-2 hover:text-accent-light hover:underline transition-colors">WhatsApp</a>
+              <a href="mailto:contact@dronescope.ro" className="block underline-offset-2 hover:text-accent-light hover:underline transition-colors">contact@dronescope.ro</a>
             </div>
           </div>
           <div>
@@ -57,11 +57,11 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-white/10 text-xs text-text-muted flex flex-col md:flex-row justify-between gap-2">
+      <div className="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-white/10 text-xs text-text-secondary flex flex-col md:flex-row justify-between gap-2">
         <div>© {new Date().getFullYear()} Drone Scope. Toate drepturile rezervate.</div>
         <div className="flex gap-4">
-          <a href="#contact" className="hover:text-text-secondary transition-colors">Contact</a>
-          <a href="https://wa.me/40729626932" target="_blank" rel="noopener noreferrer" className="hover:text-text-secondary transition-colors">WhatsApp</a>
+          <a href="#contact" className="link-accessible">Contact</a>
+          <a href="https://wa.me/40729626932" target="_blank" rel="noopener noreferrer" className="link-accessible">WhatsApp</a>
         </div>
       </div>
     </footer>

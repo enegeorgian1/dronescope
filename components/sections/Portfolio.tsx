@@ -150,7 +150,7 @@ export default function Portfolio() {
           </AnimatePresence>
         </div>
 
-        <p className="text-center text-xs text-text-muted mt-8">
+        <p className="text-center text-xs text-text-secondary mt-8">
           Click pe orice imagine pentru a deschide galeria completă • {filteredProjects.length} proiecte afișate
         </p>
       </div>

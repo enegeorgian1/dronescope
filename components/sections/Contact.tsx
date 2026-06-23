@@ -239,7 +239,7 @@ export default function Contact() {
                     )}
                   </button>
 
-                  <p className="text-xs text-text-muted pt-2">
+                  <p className="text-xs text-text-secondary pt-2">
                     Răspundem în maxim 2 ore în timpul programului. Sau scrie-ne direct pe WhatsApp pentru răspuns imediat.
                   </p>
                 </form>
@@ -252,13 +252,13 @@ export default function Contact() {
             <div>
               <div className="text-accent text-xs tracking-widest mb-3">CONTACT DIRECT</div>
               <div className="space-y-4 text-lg">
-                <a href="tel:+40729626932" className="block hover:text-accent transition">
+                <a href="tel:+40729626932" className="link-accessible block w-fit">
                   0729 626 932
                 </a>
-                <a href="https://wa.me/40729626932" target="_blank" className="block hover:text-accent transition">
+                <a href="https://wa.me/40729626932" target="_blank" rel="noopener noreferrer" className="link-accessible block w-fit">
                   WhatsApp
                 </a>
-                <a href="mailto:contact@dronescope.ro" className="block hover:text-accent transition">
+                <a href="mailto:contact@dronescope.ro" className="link-accessible block w-fit">
                   contact@dronescope.ro
                 </a>
               </div>

@@ -13,16 +13,15 @@ export async function POST(request: Request) {
     console.log("Preferred Date:", preferredDate || "Not specified");
     console.log("Message:", message);
 
-    // Trimitem email doar dacă avem cheia (evităm crash la build)
+    // Trimitem email doar dacă avem cheia Resend
     if (process.env.RESEND_API_KEY) {
       try {
-        // Import dinamic → nu se încarcă la build dacă nu avem cheie
         const { Resend } = await import("resend");
         const resend = new Resend(process.env.RESEND_API_KEY);
 
         await resend.emails.send({
-          from: "Drone Scope <contact@dronescope.ro>",
-          to: "contact@dronescope.ro",
+          from: "Drone Scope <no-reply@dronescope.ro>",
+          to: "enegeorgian1@gmail.com",
           subject: `Cerere nouă de la ${name} - ${service}`,
           replyTo: email,
           html: `
@@ -40,20 +39,18 @@ export async function POST(request: Request) {
             </div>
           `,
         });
+
         console.log("✅ Email trimis cu succes prin Resend");
       } catch (emailError) {
         console.error("❌ Eroare la trimiterea emailului prin Resend:", emailError);
       }
     } else {
-      console.log("⚠️ RESEND_API_KEY nu este setat → emailul nu a fost trimis, dar lead-ul a fost logat.");
+      console.log("⚠️ RESEND_API_KEY nu este setat → emailul nu a fost trimis.");
     }
 
-    // Întotdeauna returnăm succes (ca să nu pierdem lead-uri)
     return NextResponse.json({ success: true });
-
   } catch (error) {
     console.error("Contact form error:", error);
-    // Chiar și la eroare gravă, returnăm succes pentru utilizator
     return NextResponse.json({ success: true });
   }
 }

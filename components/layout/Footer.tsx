@@ -26,7 +26,7 @@ export default function Footer() {
             <div className="space-y-2 text-text-secondary">
               <a href="tel:+40729626932" className="block hover:text-accent">0729 626 932</a>
               <a href="https://wa.me/40729626932" target="_blank" className="block hover:text-accent">WhatsApp</a>
-              <a href="mailto:service@dronedoctor.ro" className="block hover:text-accent">service@dronedoctor.ro</a>
+              <a href="mailto:contact@dronescope.ro" className="block hover:text-accent">contact@dronescope.ro</a>
             </div>
           </div>
           <div>

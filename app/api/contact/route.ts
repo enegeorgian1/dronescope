@@ -21,8 +21,8 @@ export async function POST(request: Request) {
         const resend = new Resend(process.env.RESEND_API_KEY);
 
         await resend.emails.send({
-          from: "Drone Scope <onboarding@resend.dev>",
-          to: "service@dronedoctor.ro",
+          from: "Drone Scope <contact@dronescope.ro>",
+          to: "contact@dronescope.ro",
           subject: `Cerere nouă de la ${name} - ${service}`,
           replyTo: email,
           html: `

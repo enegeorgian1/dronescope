@@ -241,8 +241,8 @@ export default function Contact() {
                 <a href="https://wa.me/40729626932" target="_blank" className="block hover:text-accent transition">
                   WhatsApp
                 </a>
-                <a href="mailto:service@dronedoctor.ro" className="block hover:text-accent transition">
-                  service@dronedoctor.ro
+                <a href="mailto:contact@dronescope.ro" className="block hover:text-accent transition">
+                  contact@dronescope.ro
                 </a>
               </div>
             </div>

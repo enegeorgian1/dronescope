@@ -29,7 +29,7 @@ npm run dev
 
 ## Contact
 Telefon/WhatsApp: 0729 626 932
-Email: service@dronedoctor.ro
+Email: contact@dronescope.ro (activ prin Hostinger)
 Oraș: Constanța
 
 ---

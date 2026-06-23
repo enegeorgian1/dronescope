@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
@@ -20,13 +21,19 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative h-[100dvh] min-h-[720px] flex items-center justify-center overflow-hidden pt-20">
-      {/* Background Image - More cinematic drone shot */}
+    <section
+      aria-label="Filmări și fotografii aeriene premium Drone Scope"
+      className="relative h-[100dvh] min-h-[720px] flex items-center justify-center overflow-hidden pt-20"
+    >
       <div className="absolute inset-0 bg-black">
-        <img
+        <Image
           src="https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&w=2000"
-          alt="Drone aerial view over dramatic coastline at golden hour"
-          className="absolute inset-0 w-full h-full object-cover"
+          alt="Filmare aeriană cinematică cu dronă deasupra litoralului românesc la apus — Drone Scope Constanța"
+          fill
+          priority
+          sizes="100vw"
+          quality={85}
+          className="object-cover"
         />
         {/* Strong cinematic gradient overlays */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/85" />
@@ -50,7 +57,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.35 }}
-          className="text-6xl md:text-[72px] lg:text-[84px] font-bold tracking-[-3.5px] leading-[0.9] mb-6 text-white"
+          className="text-6xl md:text-[72px] lg:text-[84px] font-bold tracking-[-3.5px] leading-[1.05] mb-6 text-white"
         >
           VIZIUNE DE LA<br />ÎNĂLȚIME.
         </motion.h1>

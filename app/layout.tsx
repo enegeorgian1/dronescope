@@ -1,9 +1,11 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import StructuredData from "@/components/seo/StructuredData";
+import { siteConfig } from "@/lib/seo";
 
 const inter = Inter({
   subsets: ["latin", "latin-ext"],
@@ -12,34 +14,82 @@ const inter = Inter({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#14B8A6",
+};
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://dronescope.ro"),
-  title: "Drone Scope | Filmări și Fotografii Aeriene Premium | Constanța",
-  description: "Filmări și fotografii aeriene profesionale cu dronă în Constanța și toată România. Peste 10 ani experiență în imobiliare, nunți, evenimente, construcții și conținut de marketing. Calitate cinematografică.",
-  keywords: [
-    "filmări cu dronă",
-    "fotografii aeriene",
-    "drone photography",
-    "aerial cinematography",
-    "filmări imobiliare",
-    "nunți cu dronă",
-    "drone Constanța",
-    "videoclipuri aeriene",
-    "drone România",
-  ],
-  authors: [{ name: "Drone Scope" }],
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.title,
+    template: "%s | Drone Scope",
+  },
+  description: siteConfig.description,
+  keywords: [...siteConfig.keywords],
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
+  category: "Photography",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: siteConfig.url,
+    languages: {
+      ro: siteConfig.url,
+    },
+  },
   openGraph: {
-    title: "Drone Scope | Filmări și Fotografii Aeriene Premium",
-    description: "Viziune de la înălțime. Filmări și fotografii aeriene cinematografice pentru imobiliare, evenimente și branduri premium din România.",
+    type: "website",
+    locale: siteConfig.locale,
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    title: siteConfig.title,
+    description: siteConfig.shortDescription,
     images: [
       {
-        url: "/og-image.png",
+        url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: "Drone Scope - Filmări aeriene premium",
+        alt: "Drone Scope — Filmări și fotografii aeriene premium în Constanța",
+        type: "image/jpeg",
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.title,
+    description: siteConfig.shortDescription,
+    images: [siteConfig.ogImage],
+  },
+  other: {
+    "geo.region": "RO-CT",
+    "geo.placename": siteConfig.address.city,
+    "geo.position": `${siteConfig.geo.latitude};${siteConfig.geo.longitude}`,
+    ICBM: `${siteConfig.geo.latitude}, ${siteConfig.geo.longitude}`,
+  },
+  formatDetection: {
+    telephone: true,
+    email: true,
+    address: false,
+  },
+  ...(process.env.GOOGLE_SITE_VERIFICATION
+    ? {
+        verification: {
+          google: process.env.GOOGLE_SITE_VERIFICATION,
+        },
+      }
+    : {}),
 };
 
 export default function RootLayout({
@@ -48,8 +98,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ro" className="dark" suppressHydrationWarning>
+    <html lang={siteConfig.language} className="dark" suppressHydrationWarning>
       <body className={`${inter.variable} font-sans bg-bg text-text antialiased`}>
+        <StructuredData />
         <Navbar />
         {children}
         <Footer />

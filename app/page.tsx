@@ -11,7 +11,9 @@ import Testimonials from "@/components/sections/Testimonials";
 import Clients from "@/components/sections/Clients";
 import FAQ from "@/components/sections/FAQ";
 import Contact from "@/components/sections/Contact";
+import CTA from "@/components/sections/CTA";
 import FloatingButtons from "@/components/ui/FloatingButtons";
+import SectionTitle from "@/components/ui/SectionTitle";
 
 // ==================== ABOUT + STATS ====================
 function About() {
@@ -27,7 +29,7 @@ function About() {
       <div className="grid md:grid-cols-12 gap-x-12 items-center">
         <div className="md:col-span-7">
           <div className="uppercase tracking-[3px] text-xs text-accent mb-3">CINE SUNTEM</div>
-          <h2 className="section-title mb-8">Peste un deceniu de excelență în filmări aeriene.</h2>
+          <SectionTitle className="mb-8">Peste un deceniu de excelență în filmări aeriene.</SectionTitle>
           
           <div className="prose prose-invert text-text-secondary max-w-prose text-[15px] leading-relaxed space-y-5">
             <p>
@@ -85,7 +87,7 @@ function Services() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
             <div className="uppercase tracking-[3px] text-xs text-accent mb-3">CE OFERIM</div>
-            <h2 className="section-title">Servicii premium,<br />rezultate de neuitat.</h2>
+            <SectionTitle>Servicii premium,<br />rezultate de neuitat.</SectionTitle>
           </div>
           <p className="max-w-sm text-text-secondary mt-4 md:mt-0">
             Fiecare serviciu este adaptat la nevoile tale specifice și livrat la cele mai înalte standarde cinematografice.
@@ -142,7 +144,7 @@ function Process() {
     <section id="proces" className="section max-w-5xl mx-auto px-6">
       <div className="text-center mb-16">
         <div className="uppercase tracking-[3px] text-xs text-accent mb-3">CUM LUCRĂM</div>
-        <h2 className="section-title">Un proces clar.<br />Rezultate predictibile.</h2>
+        <SectionTitle>Un proces clar.<br />Rezultate predictibile.</SectionTitle>
       </div>
 
       <div className="space-y-6">
@@ -155,7 +157,7 @@ function Process() {
             transition={{ duration: 0.5, delay: index * 0.08 }}
             className="process-step card flex flex-col md:flex-row md:items-center gap-8"
           >
-            <div className="text-[72px] md:text-[88px] font-bold tracking-[-4px] text-accent/20 tabular-nums shrink-0">
+            <div className="text-[72px] md:text-[88px] font-bold tracking-[-2.5px] text-accent/20 tabular-nums shrink-0">
               {step.number}
             </div>
             <div>
@@ -184,6 +186,7 @@ export default function DroneScopeWebsite() {
       <Testimonials />
       <Clients />
       <FAQ />
+      <CTA />
       <Contact />
 
       {/* Floating WhatsApp + Phone buttons */}

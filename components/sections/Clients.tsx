@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import SectionTitle from "@/components/ui/SectionTitle";
 
 const clientCategories = [
   {
@@ -48,7 +49,7 @@ export default function Clients() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-14">
           <div className="uppercase tracking-[3px] text-xs text-accent mb-3">ÎNCREDERE</div>
-          <h2 className="section-title">Au ales Drone Scope</h2>
+          <SectionTitle>Au ales Drone Scope</SectionTitle>
           <p className="mt-4 max-w-2xl mx-auto text-text-secondary text-[15px]">
             Colaborăm cu agenții imobiliare de top, organizatori de evenimente premium, 
             companii industriale și branduri care înțeleg puterea unei perspective unice.

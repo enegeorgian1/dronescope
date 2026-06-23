@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import SectionTitle from "@/components/ui/SectionTitle";
 
 interface Testimonial {
   id: number;
@@ -106,7 +107,7 @@ export default function Testimonials() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
             <div className="uppercase tracking-[3px] text-xs text-accent mb-3">CE SPUN CLIENȚII</div>
-            <h2 className="section-title">Încredere construită<br />proiect cu proiect.</h2>
+            <SectionTitle>Încredere construită<br />proiect cu proiect.</SectionTitle>
           </div>
           <p className="max-w-sm text-text-secondary mt-4 md:mt-0">
             Peste 180 de clienți ne-au ales în ultimii 10 ani. Iată câteva dintre poveștile lor.

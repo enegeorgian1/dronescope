@@ -2,8 +2,9 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import SectionTitle from "@/components/ui/SectionTitle";
 import { 
-  Award, 
+  Award,
   Camera, 
   Clock, 
   ShieldCheck, 
@@ -50,7 +51,7 @@ export default function WhyUs() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-14">
           <div className="uppercase tracking-[3px] text-xs text-accent mb-3">DE CE NOI</div>
-          <h2 className="section-title">De ce clienții premium<br />ne aleg pe noi.</h2>
+          <SectionTitle>De ce clienții premium<br />ne aleg pe noi.</SectionTitle>
           <p className="mt-4 max-w-lg mx-auto text-text-secondary text-[15px]">
             Nu oferim doar imagini cu dronă. Oferim o experiență premium, rezultate concrete și parteneriat pe termen lung.
           </p>

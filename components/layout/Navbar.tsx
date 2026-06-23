@@ -59,7 +59,7 @@ export default function Navbar() {
 >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
         {/* Logo */}
-        <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center">
+        <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center pr-2 md:pr-4">
           <DroneLogo size={28} />
         </button>
 

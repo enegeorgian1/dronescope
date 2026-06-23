@@ -2,8 +2,9 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import SectionTitle from "@/components/ui/SectionTitle";
 import { 
-  Camera, 
+  Camera,
   Zap, 
   Video, 
   Shield, 
@@ -62,7 +63,7 @@ export default function Equipment() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-14">
           <div className="uppercase tracking-[3px] text-xs text-accent mb-3">ECHIPAMENT</div>
-          <h2 className="section-title">Flotă DJI profesională.<br />Rezultate de nivel cinematografic.</h2>
+          <SectionTitle>Flotă DJI profesională.<br />Rezultate de nivel cinematografic.</SectionTitle>
           <p className="mt-4 max-w-2xl mx-auto text-text-secondary text-[15px]">
             Folosim exclusiv drone DJI de ultimă generație, calibrate și întreținute profesional. 
             Fiecare proiect beneficiază de echipamentul potrivit pentru calitatea și tipul de conținut dorit.

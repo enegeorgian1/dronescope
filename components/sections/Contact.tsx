@@ -7,6 +7,7 @@ import { z } from "zod";
 import { motion, AnimatePresence } from "framer-motion";
 import { Send, CheckCircle, Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import SectionTitle from "@/components/ui/SectionTitle";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Numele trebuie să aibă minim 2 caractere"),
@@ -92,8 +93,8 @@ export default function Contact() {
     <section id="contact" className="section bg-surface border-t border-white/10">
       <div className="max-w-5xl mx-auto px-6">
         <div className="text-center mb-12">
-          <div className="uppercase tracking-[3px] text-xs text-accent mb-3">HAIDEM SĂ VORRIM</div>
-          <h2 className="section-title mb-4">Suntem gata să zburăm pentru proiectul tău.</h2>
+          <div className="uppercase tracking-[3px] text-xs text-accent mb-3">HAIDE SĂ VORBIM</div>
+          <SectionTitle className="mb-4">Suntem gata să zburăm pentru proiectul tău.</SectionTitle>
           <p className="text-text-secondary max-w-lg mx-auto">
             Completează formularul sau scrie-ne direct pe WhatsApp. Răspundem rapid.
           </p>

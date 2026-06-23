@@ -1,9 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, MapPin } from "lucide-react";
 import { projects, type Project, type Category } from "@/lib/portfolio";
+import SectionTitle from "@/components/ui/SectionTitle";
 
 const categories: ("Toate" | Category)[] = [
   "Toate",
@@ -63,7 +65,7 @@ export default function Portfolio() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10">
           <div>
             <div className="uppercase tracking-[3px] text-xs text-accent mb-3">PORTFOLIO</div>
-            <h2 className="section-title">Lucrări care vorbesc<br />de la sine.</h2>
+            <SectionTitle>Lucrări care vorbesc<br />de la sine.</SectionTitle>
           </div>
           <p className="max-w-sm text-text-secondary mt-4 md:mt-0">
             O selecție din proiectele noastre — fotografii și videoclipuri aeriene de înaltă calitate.
@@ -97,10 +99,12 @@ export default function Portfolio() {
                 onClick={() => openLightbox(project)}
                 className="group relative aspect-[16/10] overflow-hidden rounded-2xl cursor-pointer bg-surface-2 border border-white/10 transition-all duration-300 hover:border-white/30 hover:shadow-2xl"
               >
-                <img
+                <Image
                   src={project.image}
-                  alt={project.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-[1.08]"
+                  alt={`${project.title} — filmare aeriană ${project.category} în ${project.location}, Drone Scope`}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transition-all duration-700 group-hover:scale-[1.08]"
                 />
 
                 {/* Gradient overlay */}
@@ -183,14 +187,13 @@ export default function Portfolio() {
                     muted
                   />
                 ) : (
-                  <motion.img
+                  <Image
                     key={selectedProject.id}
                     src={selectedProject.image}
-                    alt={selectedProject.title}
-                    className="w-full h-full object-cover"
-                    initial={{ opacity: 0.6, scale: 1.01 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.35 }}
+                    alt={`${selectedProject.title} — ${selectedProject.category} ${selectedProject.location}`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 1152px"
+                    className="object-cover"
                   />
                 )}
 

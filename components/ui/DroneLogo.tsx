@@ -8,9 +8,9 @@ interface DroneLogoProps {
 export default function DroneLogo({ className = "", size = 32 }: DroneLogoProps) {
   return (
     <svg
-      width={size * 5.2}
+      width={size * 5.8}
       height={size}
-      viewBox="0 0 160 32"
+      viewBox="0 0 180 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
@@ -39,26 +39,16 @@ export default function DroneLogo({ className = "", size = 32 }: DroneLogoProps)
 
       {/* Wordmark */}
       <text
-        x="52"
+        x="48"
         y="23"
         fontFamily="var(--font-inter), system-ui, sans-serif"
-        fontSize="21"
+        fontSize="19"
         fontWeight="700"
-        letterSpacing="-0.5"
+        letterSpacing="-0.8"
         fill="white"
       >
         DRONE
-      </text>
-      <text
-        x="110"
-        y="23"
-        fontFamily="var(--font-inter), system-ui, sans-serif"
-        fontSize="21"
-        fontWeight="700"
-        letterSpacing="-0.5"
-        fill="#14B8A6"
-      >
-        SCOPE
+        <tspan fill="#14B8A6" dx="12">SCOPE</tspan>
       </text>
     </svg>
   );

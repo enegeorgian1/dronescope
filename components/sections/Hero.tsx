@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { HERO_IMAGE_URL } from "@/lib/images";
 
@@ -56,12 +55,7 @@ export default function Hero() {
           pentru proiecte care merită să fie văzute altfel.
         </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.1 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
-        >
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
             type="button"
             onClick={scrollToPortfolio}
@@ -77,7 +71,7 @@ export default function Hero() {
           >
             SOLICITĂ OFERTĂ
           </button>
-        </motion.div>
+        </div>
 
         <p className="mt-14 text-[11px] tracking-[2px] text-white/50">
           ECHIPAMENT PROFESIONAL • DJI INSPIRE 3 • AIR 3S • CINEMATIC COLOR GRADING

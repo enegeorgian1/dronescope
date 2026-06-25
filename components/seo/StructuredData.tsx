@@ -1,5 +1,6 @@
 import { siteConfig } from "@/lib/seo";
 import { faqs } from "@/lib/faq";
+import { servicePages, getServiceUrl } from "@/lib/services";
 
 export default function StructuredData() {
   const localBusiness = {
@@ -38,12 +39,15 @@ export default function StructuredData() {
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Servicii filmări aeriene",
-      itemListElement: siteConfig.services.map((service, index) => ({
+      itemListElement: servicePages.map((service, index) => ({
         "@type": "Offer",
         position: index + 1,
+        url: getServiceUrl(service.slug),
         itemOffered: {
           "@type": "Service",
-          name: service,
+          name: service.title,
+          url: getServiceUrl(service.slug),
+          description: service.metaDescription,
           provider: { "@id": `${siteConfig.url}/#organization` },
         },
       })),

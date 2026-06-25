@@ -1,22 +1,26 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import DroneLogo from "@/components/ui/DroneLogo";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { href: "#despre", label: "Despre noi" },
-  { href: "#servicii", label: "Servicii" },
-  { href: "#proces", label: "Procesul nostru" },
-  { href: "#portofoliu", label: "Portofoliu" },
-  { href: "#testimoniale", label: "Testimoniale" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#despre", label: "Despre noi" },
+  { href: "/servicii", label: "Servicii" },
+  { href: "/#proces", label: "Procesul nostru" },
+  { href: "/#portofoliu", label: "Portofoliu" },
+  { href: "/#testimoniale", label: "Testimoniale" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   React.useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -24,18 +28,21 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollTo = (id: string) => {
-    const element = document.querySelector(id);
-    if (element) {
-      const offset = 80;
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition - bodyRect - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
+  const navigate = (href: string) => {
+    if (href.startsWith("/#")) {
+      const id = href.slice(1);
+      if (isHome) {
+        const element = document.querySelector(id);
+        if (element) {
+          const offset = 80;
+          const bodyRect = document.body.getBoundingClientRect().top;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition - bodyRect - offset;
+          window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+        }
+      } else {
+        window.location.href = href;
+      }
     }
     setIsOpen(false);
   };
@@ -60,31 +67,39 @@ export default function Navbar() {
 >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
         {/* Logo */}
-        <a
+        <Link
           href="/"
           onClick={(e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: "smooth" });
+            if (isHome) {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
           }}
           className="flex items-center pr-2 md:pr-4"
           aria-label="Drone Scope — mergi la începutul paginii"
         >
           <span className="sr-only">Drone Scope</span>
           <DroneLogo size={28} />
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-10">
-          {navLinks.map((link) => (
-            <button
-              type="button"
-              key={link.href}
-              onClick={() => scrollTo(link.href)}
-              className="nav-link text-sm"
-            >
-              {link.label}
-            </button>
-          ))}
+          {navLinks.map((link) =>
+            link.href.startsWith("/#") ? (
+              <button
+                type="button"
+                key={link.href}
+                onClick={() => navigate(link.href)}
+                className="nav-link text-sm"
+              >
+                {link.label}
+              </button>
+            ) : (
+              <Link key={link.href} href={link.href} className="nav-link text-sm">
+                {link.label}
+              </Link>
+            )
+          )}
         </div>
 
         {/* Desktop CTAs */}
@@ -127,16 +142,27 @@ export default function Navbar() {
             className="md:hidden border-t border-white/10 bg-bg"
           >
             <div className="px-6 py-8 flex flex-col gap-6 text-lg">
-              {navLinks.map((link) => (
-                <button
-                  type="button"
-                  key={link.href}
-                  onClick={() => scrollTo(link.href)}
-                  className="text-left text-text-secondary active:text-text"
-                >
-                  {link.label}
-                </button>
-              ))}
+              {navLinks.map((link) =>
+                link.href.startsWith("/#") ? (
+                  <button
+                    type="button"
+                    key={link.href}
+                    onClick={() => navigate(link.href)}
+                    className="text-left text-text-secondary active:text-text"
+                  >
+                    {link.label}
+                  </button>
+                ) : (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className="text-left text-text-secondary active:text-text"
+                  >
+                    {link.label}
+                  </Link>
+                )
+              )}
 
               <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
                 <button

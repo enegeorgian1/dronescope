@@ -4,6 +4,9 @@ import { nuntaCuDronaArticol } from "@/lib/articles/nunta-cu-drona-pe-litoral";
 import { filmariMamaiaArticol } from "@/lib/articles/filmari-cu-drona-mamaia";
 import { fotografiiImobiliareArticol } from "@/lib/articles/fotografii-aeriene-imobiliare-avantaje";
 import { autorizatiiDronaArticol } from "@/lib/articles/autorizatii-filmari-drona-romania";
+import { inspectiiTermaleArticol } from "@/lib/articles/inspectii-terminale-drona-romania";
+import { randare3dArticol } from "@/lib/articles/randare-3d-fotogrammetrie-drona-santier";
+import { preturiIndustrialeArticol } from "@/lib/articles/preturi-filmari-industriale-termal-3d-constanta";
 
 export type RichSegment =
   | { type: "text"; content: string }
@@ -70,6 +73,9 @@ export const blogArticles: BlogArticle[] = [
   filmariMamaiaArticol,
   fotografiiImobiliareArticol,
   autorizatiiDronaArticol,
+  inspectiiTermaleArticol,
+  randare3dArticol,
+  preturiIndustrialeArticol,
 ];
 
 export function getArticleBySlug(slug: string): BlogArticle | undefined {

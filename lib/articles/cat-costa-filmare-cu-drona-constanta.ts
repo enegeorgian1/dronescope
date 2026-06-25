@@ -219,6 +219,8 @@ export const catCostaFilmareArticol: BlogArticle = {
             [
               { type: "text", content: "Proiecte în Portul Constanța, șantiere sau parcuri eoliene necesită autorizații speciale și planificare avansată. Prețul se stabilește după evaluarea locației. Detalii pe " },
               { type: "link", content: "filmări industriale & construcții", href: "/servicii/industrial-constructii" },
+              { type: "text", content: ". Pentru termal și randare 3D, vezi " },
+              { type: "link", content: "prețuri industriale 2026", href: "/blog/preturi-filmari-industriale-termal-3d-constanta" },
               { type: "text", content: "." },
             ],
           ],

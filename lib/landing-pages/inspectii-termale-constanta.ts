@@ -75,7 +75,12 @@ export const inspectiiTermaleConstanta: LandingPage = {
     "Constanța — șantiere urbane",
   ],
   relatedServiceSlugs: ["matrice-4t-termal-3d", "industrial-constructii"],
-  relatedBlogSlugs: ["autorizatii-filmari-drona-romania"],
+  relatedBlogSlugs: [
+    "inspectii-terminale-drona-romania",
+    "randare-3d-fotogrammetrie-drona-santier",
+    "preturi-filmari-industriale-termal-3d-constanta",
+    "autorizatii-filmari-drona-romania",
+  ],
   featuredProjectIds: [11, 12, 17],
   faqs: [
     {

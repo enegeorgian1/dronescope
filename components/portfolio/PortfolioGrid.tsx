@@ -1,15 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
 import { MapPin } from "lucide-react";
 import {
   projects,
   getProjectAlt,
   type Category,
-  type Project,
 } from "@/lib/portfolio";
 
 const categories: ("Toate" | Category)[] = [
@@ -55,11 +53,47 @@ export default function PortfolioGrid({ limit, showFilters = true }: PortfolioGr
       )}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        <AnimatePresence mode="popLayout">
-          {filteredProjects.map((project, index) => (
-            <ProjectCard key={project.id} project={project} index={index} />
-          ))}
-        </AnimatePresence>
+        {filteredProjects.map((project) => (
+          <Link
+            key={project.id}
+            href={`/portofoliu/${project.slug}`}
+            className="group relative aspect-[16/10] overflow-hidden rounded-2xl block bg-surface-2 border border-white/10 transition-all duration-300 hover:border-white/30 hover:shadow-2xl"
+          >
+            <Image
+              src={project.image}
+              alt={getProjectAlt(project)}
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              quality={65}
+              loading="lazy"
+              className="object-cover transition-transform duration-500 group-hover:scale-[1.05] motion-reduce:transition-none"
+            />
+
+            <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/55 to-black/95 transition-opacity group-hover:via-black/45" />
+
+            {project.videoUrl && (
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-black/60 backdrop-blur-sm">
+                  <div className="ml-1 h-0 w-0 border-y-[10px] border-l-[18px] border-y-transparent border-l-white" />
+                </div>
+              </div>
+            )}
+
+            <div className="absolute bottom-0 left-0 right-0 p-6">
+              <div className="inline-block text-[10px] tracking-[2px] text-accent bg-black/50 px-3 py-0.5 rounded mb-3">
+                {project.category.toUpperCase()}
+                {project.videoUrl && " • VIDEO"}
+              </div>
+              <h3 className="text-[21px] font-semibold text-white leading-tight mb-2 pr-6 tracking-[-0.3px]">
+                {project.title}
+              </h3>
+              <div className="flex items-center text-sm text-white/80">
+                <MapPin className="w-3.5 h-3.5 mr-1.5" aria-hidden="true" />
+                {project.location}
+              </div>
+            </div>
+          </Link>
+        ))}
       </div>
 
       <p className="text-center text-xs text-text-secondary mt-8">
@@ -75,63 +109,5 @@ export default function PortfolioGrid({ limit, showFilters = true }: PortfolioGr
         )}
       </p>
     </>
-  );
-}
-
-function ProjectCard({ project, index }: { project: Project; index: number }) {
-  return (
-    <motion.div
-      layout
-      initial={{ opacity: 0, scale: 0.96, y: 20 }}
-      animate={{ opacity: 1, scale: 1, y: 0 }}
-      exit={{ opacity: 0, scale: 0.96, y: 10 }}
-      transition={{ duration: 0.3, delay: Math.min(index * 0.03, 0.3) }}
-    >
-      <Link
-        href={`/portofoliu/${project.slug}`}
-        className="group relative aspect-[16/10] overflow-hidden rounded-2xl block bg-surface-2 border border-white/10 transition-all duration-300 hover:border-white/30 hover:shadow-2xl"
-      >
-        <Image
-          src={project.image}
-          alt={getProjectAlt(project)}
-          fill
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-          quality={70}
-          loading="lazy"
-          className="object-cover transition-all duration-700 group-hover:scale-[1.08]"
-        />
-
-        <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/55 to-black/95 transition-opacity group-hover:via-black/45" />
-
-        {project.videoUrl && (
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-black/60 backdrop-blur-sm transition group-hover:bg-black/75">
-              <div className="ml-1 h-0 w-0 border-y-[10px] border-l-[18px] border-y-transparent border-l-white" />
-            </div>
-          </div>
-        )}
-
-        <div className="absolute bottom-0 left-0 right-0 p-6">
-          <div className="inline-block text-[10px] tracking-[2px] text-accent bg-black/50 px-3 py-0.5 rounded mb-3">
-            {project.category.toUpperCase()}
-            {project.videoUrl && " • VIDEO"}
-          </div>
-          <h3 className="text-[21px] font-semibold text-white leading-tight mb-2 pr-6 tracking-[-0.3px]">
-            {project.title}
-          </h3>
-          <div className="flex items-center text-sm text-white/80">
-            <MapPin className="w-3.5 h-3.5 mr-1.5" aria-hidden="true" />
-            {project.location}
-          </div>
-        </div>
-
-        <div
-          className="absolute top-5 right-5 px-4 py-1 rounded-full bg-black/60 text-white text-xs tracking-widest border border-white/20 opacity-0 group-hover:opacity-100 transition-all duration-300"
-          aria-hidden="true"
-        >
-          VEZI PROIECTUL
-        </div>
-      </Link>
-    </motion.div>
   );
 }

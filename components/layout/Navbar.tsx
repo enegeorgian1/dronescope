@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import DroneLogo from "@/components/ui/DroneLogo";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { href: "/#despre", label: "Despre noi" },
@@ -60,14 +59,13 @@ export default function Navbar() {
   return (
     <nav
       aria-label="Navigare principală"
-      className={`fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300 ${
-    scrolled
-      ? "border-white/15 bg-bg/95 backdrop-blur-2xl shadow-lg shadow-black/20"
-      : "border-white/10 bg-bg/80 backdrop-blur-xl"
-  }`}
->
+      className={`fixed top-0 left-0 right-0 z-50 border-b transition-colors duration-300 ${
+        scrolled
+          ? "border-white/15 bg-bg/95 backdrop-blur-2xl shadow-lg shadow-black/20"
+          : "border-white/10 bg-bg/80 backdrop-blur-xl"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
-        {/* Logo */}
         <Link
           href="/"
           onClick={(e) => {
@@ -83,7 +81,6 @@ export default function Navbar() {
           <DroneLogo size={28} />
         </Link>
 
-        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-10">
           {navLinks.map((link) =>
             link.href.startsWith("/#") ? (
@@ -103,13 +100,8 @@ export default function Navbar() {
           )}
         </div>
 
-        {/* Desktop CTAs */}
         <div className="hidden md:flex items-center gap-3">
-          <button
-            type="button"
-            onClick={callPhone}
-            className="btn-ghost flex items-center gap-2"
-          >
+          <button type="button" onClick={callPhone} className="btn-ghost flex items-center gap-2">
             <Phone className="w-4 h-4" aria-hidden="true" />
             0729 626 932
           </button>
@@ -119,7 +111,6 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
@@ -132,55 +123,46 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            id="mobile-navigation"
-            className="md:hidden border-t border-white/10 bg-bg"
-          >
-            <div className="px-6 py-8 flex flex-col gap-6 text-lg">
-              {navLinks.map((link) =>
-                link.href.startsWith("/#") ? (
-                  <button
-                    type="button"
-                    key={link.href}
-                    onClick={() => navigate(link.href)}
-                    className="text-left text-text-secondary active:text-text"
-                  >
-                    {link.label}
-                  </button>
-                ) : (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className="text-left text-text-secondary active:text-text"
-                  >
-                    {link.label}
-                  </Link>
-                )
-              )}
+      <div
+        id="mobile-navigation"
+        className={`md:hidden border-t border-white/10 bg-bg overflow-hidden transition-[max-height,opacity] duration-300 ease-out motion-reduce:transition-none ${
+          isOpen ? "max-h-[32rem] opacity-100" : "max-h-0 opacity-0"
+        }`}
+        aria-hidden={!isOpen}
+      >
+        <div className="px-6 py-8 flex flex-col gap-6 text-lg">
+          {navLinks.map((link) =>
+            link.href.startsWith("/#") ? (
+              <button
+                type="button"
+                key={link.href}
+                onClick={() => navigate(link.href)}
+                className="text-left text-text-secondary active:text-text"
+              >
+                {link.label}
+              </button>
+            ) : (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="text-left text-text-secondary active:text-text"
+              >
+                {link.label}
+              </Link>
+            )
+          )}
 
-              <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
-                <button
-                  type="button"
-                  onClick={callPhone}
-                  className="btn-secondary justify-center"
-                >
-                  <Phone className="w-4 h-4" aria-hidden="true" /> 0729 626 932
-                </button>
-                <button type="button" onClick={openWhatsApp} className="btn-primary justify-center">
-                  <MessageCircle className="w-4 h-4" aria-hidden="true" /> Scrie-ne pe WhatsApp
-                </button>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
+            <button type="button" onClick={callPhone} className="btn-secondary justify-center">
+              <Phone className="w-4 h-4" aria-hidden="true" /> 0729 626 932
+            </button>
+            <button type="button" onClick={openWhatsApp} className="btn-primary justify-center">
+              <MessageCircle className="w-4 h-4" aria-hidden="true" /> Scrie-ne pe WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
     </nav>
   );
 }

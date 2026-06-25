@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 import { ChevronLeft, ChevronRight, Star, ExternalLink } from "lucide-react";
 import SectionTitle from "@/components/ui/SectionTitle";
 import { testimonials } from "@/lib/testimonials";
@@ -9,40 +8,16 @@ import { hasGoogleBusiness, siteConfig } from "@/lib/seo";
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(0);
-
-  const goTo = (newIndex: number) => {
-    const newDirection = newIndex > currentIndex ? 1 : -1;
-    setDirection(newDirection);
-    setCurrentIndex(newIndex);
-  };
 
   const goToPrevious = () => {
-    const newIndex = currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1;
-    goTo(newIndex);
+    setCurrentIndex(currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1);
   };
 
   const goToNext = () => {
-    const newIndex = currentIndex === testimonials.length - 1 ? 0 : currentIndex + 1;
-    goTo(newIndex);
+    setCurrentIndex(currentIndex === testimonials.length - 1 ? 0 : currentIndex + 1);
   };
 
   const currentTestimonial = testimonials[currentIndex];
-
-  const slideVariants = {
-    enter: (dir: number) => ({
-      x: dir > 0 ? 80 : -80,
-      opacity: 0,
-    }),
-    center: {
-      x: 0,
-      opacity: 1,
-    },
-    exit: (dir: number) => ({
-      x: dir < 0 ? 80 : -80,
-      opacity: 0,
-    }),
-  };
 
   return (
     <section id="testimoniale" className="section bg-bg border-t border-white/10">
@@ -59,46 +34,32 @@ export default function Testimonials() {
 
         <div className="relative">
           <div className="overflow-hidden rounded-3xl bg-surface border border-white/10">
-            <div className="relative min-h-[320px] md:min-h-[280px] flex items-center px-8 md:px-14 py-10">
-              <AnimatePresence custom={direction} mode="wait">
-                <motion.div
-                  key={currentIndex}
-                  custom={direction}
-                  variants={slideVariants}
-                  initial="enter"
-                  animate="center"
-                  exit="exit"
-                  transition={{
-                    x: { type: "spring", stiffness: 300, damping: 30 },
-                    opacity: { duration: 0.2 },
-                  }}
-                  className="w-full"
-                >
-                  <div className="max-w-3xl">
-                    <div className="flex gap-1 mb-6">
-                      {Array.from({ length: currentTestimonial.rating }).map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-accent text-accent" />
-                      ))}
+            <div className="relative min-h-[280px] flex items-center px-8 md:px-14 py-10">
+              <div key={currentIndex} className="w-full fade-in">
+                <div className="max-w-3xl">
+                  <div className="flex gap-1 mb-6">
+                    {Array.from({ length: currentTestimonial.rating }).map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                    ))}
+                  </div>
+
+                  <blockquote className="text-xl md:text-2xl leading-tight tracking-tight text-white mb-10">
+                    „{currentTestimonial.quote}"
+                  </blockquote>
+
+                  <div>
+                    <div className="font-semibold text-lg text-white">
+                      {currentTestimonial.name}
                     </div>
-
-                    <blockquote className="text-2xl md:text-[27px] leading-tight tracking-tight text-white mb-10">
-                      „{currentTestimonial.quote}"
-                    </blockquote>
-
-                    <div>
-                      <div className="font-semibold text-lg text-white">
-                        {currentTestimonial.name}
-                      </div>
-                      <div className="text-text-secondary mt-1 text-sm">
-                        {currentTestimonial.role} — {currentTestimonial.company}
-                      </div>
-                      <div className="text-accent text-xs tracking-widest mt-1">
-                        {currentTestimonial.location}
-                      </div>
+                    <div className="text-text-secondary mt-1 text-sm">
+                      {currentTestimonial.role} — {currentTestimonial.company}
+                    </div>
+                    <div className="text-accent text-xs tracking-widest mt-1">
+                      {currentTestimonial.location}
                     </div>
                   </div>
-                </motion.div>
-              </AnimatePresence>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -108,8 +69,8 @@ export default function Testimonials() {
                 <button
                   type="button"
                   key={index}
-                  onClick={() => goTo(index)}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${index === currentIndex ? "w-8 bg-accent" : "w-4 bg-white/20 hover:bg-white/40"}`}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`h-1.5 rounded-full transition-all duration-300 motion-reduce:transition-none ${index === currentIndex ? "w-8 bg-accent" : "w-4 bg-white/20 hover:bg-white/40"}`}
                   aria-label={`Mergi la testimonialul ${index + 1}`}
                 />
               ))}

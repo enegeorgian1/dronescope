@@ -1,7 +1,5 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
 
 export default function CTA() {
@@ -22,13 +20,7 @@ export default function CTA() {
   return (
     <section className="section bg-bg border-t border-white/10">
       <div className="max-w-5xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="relative overflow-hidden rounded-3xl border border-accent/20 bg-gradient-to-br from-accent/10 via-surface to-surface p-10 md:p-14 text-center"
-        >
+        <div className="relative overflow-hidden rounded-3xl border border-accent/20 bg-gradient-to-br from-accent/10 via-surface to-surface p-10 md:p-14 text-center">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/5 via-transparent to-transparent pointer-events-none" />
 
           <div className="relative z-10">
@@ -59,7 +51,7 @@ export default function CTA() {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

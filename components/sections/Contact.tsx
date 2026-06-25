@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { motion, AnimatePresence } from "framer-motion";
 import { Send, CheckCircle, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import SectionTitle from "@/components/ui/SectionTitle";
@@ -100,33 +99,20 @@ export default function Contact() {
           </p>
         </div>
 
-        <motion.div 
-          className="grid lg:grid-cols-5 gap-12"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          {/* Form */}
+        <div className="grid lg:grid-cols-5 gap-12">
           <div className="lg:col-span-3">
-            <AnimatePresence mode="wait">
-              {isSubmitted ? (
-                <motion.div
-                  key="success"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="card flex flex-col items-center justify-center py-16 text-center"
-                >
-                  <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-6">
-                    <CheckCircle className="w-9 h-9 text-accent" />
-                  </div>
-                  <h3 className="text-2xl font-semibold mb-3">Mulțumim!</h3>
-                  <p className="text-text-secondary max-w-sm">
-                    Mesajul tău a fost trimis cu succes. Te vom contacta în maxim 2 ore.
-                  </p>
-                </motion.div>
-              ) : (
-                <form onSubmit={handleSubmit(onSubmit)} className="space-y-5" aria-label="Formular de contact">
+            {isSubmitted ? (
+              <div className="card flex flex-col items-center justify-center py-16 text-center fade-in">
+                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-6">
+                  <CheckCircle className="w-9 h-9 text-accent" />
+                </div>
+                <h3 className="text-2xl font-semibold mb-3">Mulțumim!</h3>
+                <p className="text-text-secondary max-w-sm">
+                  Mesajul tău a fost trimis cu succes. Te vom contacta în maxim 2 ore.
+                </p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-5" aria-label="Formular de contact">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
                       <label className="block">
@@ -242,9 +228,8 @@ export default function Contact() {
                   <p className="text-xs text-text-secondary pt-2">
                     Răspundem în maxim 2 ore în timpul programului. Sau scrie-ne direct pe WhatsApp pentru răspuns imediat.
                   </p>
-                </form>
-              )}
-            </AnimatePresence>
+              </form>
+            )}
           </div>
 
           {/* Contact Info Side */}
@@ -278,7 +263,7 @@ export default function Contact() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

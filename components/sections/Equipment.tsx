@@ -1,8 +1,5 @@
-"use client";
-
-import React from "react";
+import type { ElementType } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import SectionTitle from "@/components/ui/SectionTitle";
 import {
   fleetDrones,
@@ -18,7 +15,7 @@ import {
   Battery,
 } from "lucide-react";
 
-const iconById: Record<string, React.ElementType> = {
+const iconById: Record<string, ElementType> = {
   "matrice-4t": Thermometer,
   "mavic-4-pro": Camera,
   "mini-5-pro": Video,
@@ -41,17 +38,13 @@ export default function Equipment() {
         </div>
 
         <div className="space-y-8">
-          {fleetDrones.map((drone, index) => {
+          {fleetDrones.map((drone) => {
             const Icon = iconById[drone.id] ?? Camera;
             const isMatrice = drone.id === "matrice-4t";
 
             return (
-              <motion.div
+              <div
                 key={drone.id}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.55, delay: index * 0.05, ease: [0.21, 0.92, 0.25, 1] }}
                 className={`card group ${isMatrice ? "border-accent/30 bg-surface" : ""}`}
               >
                 <div className="flex flex-col lg:flex-row lg:gap-10">
@@ -113,18 +106,12 @@ export default function Equipment() {
                     </ul>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             );
           })}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="card mt-8"
-        >
+        <div className="card mt-8">
           <div className="flex items-start gap-4">
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
               <Battery className="h-6 w-6" />
@@ -137,7 +124,7 @@ export default function Equipment() {
               <p className="text-xs text-accent/80 tracking-widest">{supportEquipment.specs}</p>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         <div className="mt-10 text-center text-sm text-text-secondary max-w-2xl mx-auto">
           Alegem drona potrivită pentru fiecare proiect — Matrice 4T pentru termal și randare 3D,

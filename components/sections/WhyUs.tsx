@@ -1,15 +1,11 @@
-"use client";
-
-import React from "react";
-import { motion } from "framer-motion";
 import SectionTitle from "@/components/ui/SectionTitle";
-import { 
+import {
   Award,
-  Camera, 
-  Clock, 
-  ShieldCheck, 
-  Zap, 
-  TrendingUp 
+  Camera,
+  Clock,
+  ShieldCheck,
+  Zap,
+  TrendingUp,
 } from "lucide-react";
 
 const advantages = [
@@ -61,15 +57,7 @@ export default function WhyUs() {
           {advantages.map((advantage, index) => {
             const Icon = advantage.icon;
             return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.55, delay: index * 0.06, ease: [0.21, 0.92, 0.25, 1] }}
-                whileHover={{ y: -4 }}
-                className="card group"
-              >
+              <div key={index} className="card group">
                 <div className="flex items-center gap-4 mb-5">
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent group-hover:bg-accent group-hover:text-bg transition-colors">
                     <Icon className="h-6 w-6" />
@@ -79,7 +67,7 @@ export default function WhyUs() {
                 <p className="text-text-secondary leading-relaxed text-[15px]">
                   {advantage.desc}
                 </p>
-              </motion.div>
+              </div>
             );
           })}
         </div>

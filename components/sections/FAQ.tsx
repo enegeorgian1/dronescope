@@ -1,18 +1,7 @@
-"use client";
-
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Plus, Minus } from "lucide-react";
 import SectionTitle from "@/components/ui/SectionTitle";
 import { faqs } from "@/lib/faq";
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  const toggle = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
     <section id="faq" className="section bg-surface border-t border-white/10">
       <div className="max-w-4xl mx-auto px-6">
@@ -25,54 +14,26 @@ export default function FAQ() {
         </div>
 
         <div className="space-y-3">
-          {faqs.map((faq, index) => {
-            const isOpen = openIndex === index;
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="border border-white/10 rounded-2xl overflow-hidden bg-bg"
-              >
-                <button
-                  type="button"
-                  id={`faq-question-${index}`}
-                  onClick={() => toggle(index)}
-                  aria-expanded={isOpen}
-                  aria-controls={`faq-answer-${index}`}
-                  className="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-white/5 transition-colors"
+          {faqs.map((faq, index) => (
+            <details
+              key={index}
+              className="group border border-white/10 rounded-2xl bg-bg overflow-hidden"
+              open={index === 0}
+            >
+              <summary className="cursor-pointer px-6 py-5 text-lg font-medium list-none flex items-center justify-between gap-4 hover:bg-white/5 transition-colors [&::-webkit-details-marker]:hidden">
+                {faq.question}
+                <span
+                  className="text-accent text-xl shrink-0 group-open:rotate-45 transition-transform motion-reduce:transition-none"
+                  aria-hidden="true"
                 >
-                  <span className="text-lg font-medium pr-8">{faq.question}</span>
-                  <span className="text-accent shrink-0" aria-hidden="true">
-                    {isOpen ? <Minus size={20} /> : <Plus size={20} />}
-                  </span>
-                </button>
-
-                <AnimatePresence>
-                  {isOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
-                      className="overflow-hidden"
-                    >
-                      <div
-                        id={`faq-answer-${index}`}
-                        role="region"
-                        aria-labelledby={`faq-question-${index}`}
-                        className="px-6 pb-6 text-text-secondary leading-relaxed text-[15px]"
-                      >
-                        {faq.answer}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
-            );
-          })}
+                  +
+                </span>
+              </summary>
+              <div className="px-6 pb-6 text-text-secondary leading-relaxed text-[15px]">
+                {faq.answer}
+              </div>
+            </details>
+          ))}
         </div>
 
         <div className="mt-10 text-center text-sm text-text-secondary">

@@ -3,59 +3,25 @@
 import React from "react";
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/ui/SectionTitle";
-import { 
+import {
+  fleetDrones,
+  fleetSummary,
+  supportEquipment,
+} from "@/lib/equipment";
+import {
   Camera,
-  Zap, 
-  Video, 
-  Shield, 
-  Monitor, 
-  Battery 
+  Video,
+  Thermometer,
+  Orbit,
+  Battery,
 } from "lucide-react";
 
-const equipment = [
-  {
-    icon: Camera,
-    title: "DJI Inspire 3",
-    subtitle: "Flagship Cinematografic",
-    description: "Sistemul nostru principal pentru proiecte de nivel înalt. Senzor full-frame X9-8K, suport ProRes RAW, transmisie de ultimă generație și capacitate de zbor cu greutate mare.",
-    specs: "8K 30fps • Full Frame • ProRes RAW • 15+ km transmisie",
-  },
-  {
-    icon: Video,
-    title: "DJI Air 3S",
-    subtitle: "Versatilitate Premium",
-    description: "Drone dual-camera extrem de eficient. Combină un senzor mare cu un teleobiectiv puternic. Ideal pentru majoritatea proiectelor imobiliare, nunți și conținut de marketing.",
-    specs: "1-inch sensor • 3x tele • 45 min zbor • 4K/60fps",
-  },
-  {
-    icon: Camera,
-    title: "DJI Mavic 3 Pro",
-    subtitle: "Calitate Hasselblad",
-    description: "Sistem triplu cameră cu senzor Hasselblad de 4/3. Excelent pentru fotografii aeriene de înaltă rezoluție și videoclipuri cu compresie cinematică.",
-    specs: "Hasselblad 4/3 • 3x + 7x zoom • 43 min zbor",
-  },
-  {
-    icon: Zap,
-    title: "DJI Avata 2 + FPV",
-    subtitle: "Shoturi Dinamice",
-    description: "Sistem FPV pentru capturi creative și mișcări imposibil de realizat cu drone normale. Perfect pentru reclame energice, sport și conținut dinamic.",
-    specs: "4K/60fps • Low latency • Protecție elice",
-  },
-  {
-    icon: Shield,
-    title: "Sisteme Profesionale de Transmisie",
-    subtitle: "Monitorizare în Timp Real",
-    description: "Transmisie de înaltă calitate cu latență foarte mică, monitoare externe 4K și backup complet de control. Asigurăm calitate și siguranță maximă la fiecare zbor.",
-    specs: "4K live feed • 15+ km rază • Dual operator",
-  },
-  {
-    icon: Battery,
-    title: "Echipament Suport Complet",
-    subtitle: "Siguranță & Eficiență",
-    description: "Baterii multiple de rezervă, încărcătoare rapide, gimbaluri profesionale, filtre ND, stații de lucru mobile și sisteme de backup pentru zboruri lungi sau complexe.",
-    specs: "Redundanță completă • Quick charge • ND filters",
-  },
-];
+const iconById: Record<string, React.ElementType> = {
+  "matrice-4t": Thermometer,
+  "mavic-4-pro": Camera,
+  "mini-5-pro": Video,
+  "avata-360": Orbit,
+};
 
 export default function Equipment() {
   return (
@@ -63,50 +29,108 @@ export default function Equipment() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-14">
           <div className="uppercase tracking-[3px] text-xs text-accent mb-3">ECHIPAMENT</div>
-          <SectionTitle>Flotă DJI profesională.<br />Rezultate de nivel cinematografic.</SectionTitle>
-          <p className="mt-4 max-w-2xl mx-auto text-text-secondary text-[15px]">
-            Pentru fiecare filmare cu dronă în Constanța sau la nivel național, alegem echipamentul DJI potrivit — de la sesiuni imobiliare rapide cu Air 3S la producții cinematografice 8K cu Inspire 3. Calibrare profesională, baterii de rezervă și redundanță completă.
+          <SectionTitle>
+            Flotă DJI profesională.<br />
+            Termal, 3D, cinematic & FPV.
+          </SectionTitle>
+          <p className="mt-4 max-w-3xl mx-auto text-text-secondary text-[15px]">
+            {fleetSummary}
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {equipment.map((item, index) => {
-            const Icon = item.icon;
+        <div className="space-y-8">
+          {fleetDrones.map((drone, index) => {
+            const Icon = iconById[drone.id] ?? Camera;
+            const isMatrice = drone.id === "matrice-4t";
+
             return (
               <motion.div
-                key={index}
+                key={drone.id}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.55, delay: index * 0.05, ease: [0.21, 0.92, 0.25, 1] }}
-                whileHover={{ y: -4 }}
-                className="card group"
+                className={`card group ${isMatrice ? "border-accent/30 bg-surface" : ""}`}
               >
-                <div className="flex items-start gap-4 mb-5">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent group-hover:bg-accent group-hover:text-bg transition-colors">
-                    <Icon className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold tracking-tight">{item.title}</h3>
-                    <p className="text-accent text-sm tracking-wide">{item.subtitle}</p>
-                  </div>
-                </div>
+                <div className="flex flex-col lg:flex-row lg:gap-10">
+                  <div className="lg:w-2/5 shrink-0">
+                    <div className="flex items-start gap-4 mb-5">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent group-hover:bg-accent group-hover:text-bg transition-colors">
+                        <Icon className="h-6 w-6" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold tracking-tight">{drone.title}</h3>
+                        <p className="text-accent text-sm tracking-wide">{drone.subtitle}</p>
+                      </div>
+                    </div>
 
-                <p className="text-text-secondary leading-relaxed text-[15px] mb-5">
-                  {item.description}
-                </p>
+                    <p className="text-text-secondary leading-relaxed text-[15px] mb-5">
+                      {drone.description}
+                    </p>
 
-                <div className="text-xs text-accent/80 tracking-widest border-t border-white/10 pt-4">
-                  {item.specs}
+                    <div className="text-xs text-accent/80 tracking-widest border-t border-white/10 pt-4 mb-5">
+                      {drone.specs}
+                    </div>
+
+                    <div className="flex flex-wrap gap-2">
+                      {drone.idealFor.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-xs px-3 py-1 rounded-full border border-white/10 text-text-secondary"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="lg:w-3/5 mt-6 lg:mt-0">
+                    <p className="text-sm font-medium text-text mb-3">
+                      {isMatrice ? "Ce putem face cu Matrice 4T" : "Capabilități"}
+                    </p>
+                    <ul className="grid sm:grid-cols-2 gap-2">
+                      {drone.capabilities.map((cap) => (
+                        <li
+                          key={cap}
+                          className="flex items-start gap-2 text-text-secondary text-[13px] leading-relaxed"
+                        >
+                          <span className="text-accent shrink-0 mt-0.5">•</span>
+                          {cap}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </motion.div>
             );
           })}
         </div>
 
-        <div className="mt-12 text-center text-sm text-text-secondary max-w-lg mx-auto">
-          Toate dronele sunt întreținute profesional, cu baterii certificate și actualizări de firmware constante. 
-          Avem redundanță completă pentru fiecare zbor important.
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="card mt-8"
+        >
+          <div className="flex items-start gap-4">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
+              <Battery className="h-6 w-6" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">{supportEquipment.title}</h3>
+              <p className="text-text-secondary text-[15px] leading-relaxed mb-3">
+                {supportEquipment.description}
+              </p>
+              <p className="text-xs text-accent/80 tracking-widest">{supportEquipment.specs}</p>
+            </div>
+          </div>
+        </motion.div>
+
+        <div className="mt-10 text-center text-sm text-text-secondary max-w-2xl mx-auto">
+          Alegem drona potrivită pentru fiecare proiect — Matrice 4T pentru termal și randare 3D,
+          Mavic 4 Pro pentru cinematic, Mini 5 Pro pentru agilitate, Avata 360 pentru FPV și 360°.
+          Toate sunt întreținute profesional, cu baterii certificate și redundanță completă.
         </div>
       </div>
     </section>

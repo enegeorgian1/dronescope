@@ -14,7 +14,7 @@ const steps = [
   {
     number: "03",
     title: "Captură & Post-producție",
-    desc: "Efectuăm filmările aeriene cu echipament profesional DJI (Inspire 3, Air 3S). Edităm materialul la standarde cinematografice: color grading, stabilizare și montaj.",
+    desc: "Efectuăm filmările cu flota DJI — Matrice 4T pentru termal/3D, Mavic 4 Pro și Mini 5 Pro pentru cinematic, Avata 360 pentru FPV și 360°. Post-producție: color grading, stabilizare, randare 3D unde e cazul.",
   },
   {
     number: "04",

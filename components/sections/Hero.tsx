@@ -74,7 +74,7 @@ export default function Hero() {
         </div>
 
         <p className="mt-14 text-[11px] tracking-[2px] text-white/50">
-          ECHIPAMENT PROFESIONAL • DJI INSPIRE 3 • AIR 3S • CINEMATIC COLOR GRADING
+          MATRICE 4T • MAVIC 4 PRO • MINI 5 PRO • AVATA 360 • TERMAL • 3D • FPV 360°
         </p>
       </div>
 

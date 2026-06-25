@@ -287,7 +287,7 @@ export const filmariMamaiaArticol: BlogArticle = {
     },
     {
       name: "Filmare și livrare",
-      text: "Echipament DJI 4K, montaj profesional, livrare în 3–14 zile cu 2 revizii incluse.",
+      text: "Mavic 4 Pro / Mini 5 Pro, montaj profesional, livrare în 3–14 zile cu 2 revizii incluse.",
     },
   ],
 };

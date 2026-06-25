@@ -21,7 +21,7 @@ const advantages = [
   {
     icon: Camera,
     title: "Echipament cinematografic premium",
-    desc: "Lucrăm cu DJI Inspire 3, Air 3S și sisteme profesionale. Imagini 8K, color grading de studio și calitate care rezistă la cele mai exigente standarde.",
+    desc: "Flotă DJI Matrice 4T (termal, randare 3D), Mavic 4 Pro, Mini 5 Pro și Avata 360 (FPV & 360°). Alegem drona potrivită — de la inspecții industriale la filmări cinematografice.",
   },
   {
     icon: ShieldCheck,

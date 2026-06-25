@@ -32,7 +32,7 @@ export default function ServicesIndexPage() {
           </h1>
           <p className="text-text-secondary text-lg max-w-2xl mx-auto">
             Servicii complete de filmări aeriene în Constanța, pe litoral și în toată România.
-            Piloți autorizați CAA, echipament DJI profesional, peste 10 ani experiență.
+            Flotă DJI Matrice 4T, Mavic 4 Pro, Mini 5 Pro și Avata 360 — termal, randare 3D, cinematic, FPV și 360°. Piloți autorizați CAA.
           </p>
         </div>
       </section>

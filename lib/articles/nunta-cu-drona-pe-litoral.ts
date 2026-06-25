@@ -353,7 +353,7 @@ export const nuntaCuDronaArticol: BlogArticle = {
     },
     {
       name: "Filmare în ziua evenimentului",
-      text: "Pilot discret, echipament DJI 4K, momente cheie capturate. Livrare montaj cinematic în 7–14 zile cu 2 revizii incluse.",
+      text: "Pilot discret, Mavic 4 Pro / Mini 5 Pro, momente cheie capturate. Livrare montaj cinematic în 7–14 zile cu 2 revizii incluse.",
     },
   ],
 };

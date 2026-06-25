@@ -5,9 +5,9 @@ export const siteConfig = {
   language: "ro",
   title: "Filmări cu Dronă Constanța | Fotografii Aeriene | Drone Scope",
   description:
-    "Filmări cu dronă și fotografii aeriene în Constanța, Mamaia, Năvodari și pe tot litoralul. Servicii pentru imobiliare, nunți, evenimente și construcții. Piloți autorizați CAA, echipament DJI, peste 10 ani experiență.",
+    "Filmări cu dronă în Constanța și pe litoral — imobiliare, nunți, industrial, termal, randare 3D, FPV și 360°. Flotă DJI Matrice 4T, Mavic 4 Pro, Mini 5 Pro, Avata 360. Piloți autorizați CAA, peste 10 ani experiență.",
   shortDescription:
-    "Filmări cu dronă și fotografii aeriene profesionale în Constanța și România. Imobiliare, nunți, evenimente și marketing — calitate cinematografică.",
+    "Filmări cu dronă profesionale în Constanța: cinematic, termal, randare 3D, FPV și 360°. Matrice 4T, Mavic 4 Pro, Mini 5 Pro, Avata 360.",
   phone: "+40729626932",
   phoneDisplay: "0729 626 932",
   email: "contact@dronescope.ro",
@@ -57,12 +57,19 @@ export const siteConfig = {
     "pilot dronă autorizat CAA",
     "filmări evenimente dronă",
     "tur virtual dronă imobiliare",
+    "inspecții termale dronă",
+    "randare 3D dronă",
+    "fotogrammetrie dronă",
+    "filmări 360 dronă",
+    "filmări FPV dronă",
+    "DJI Matrice 4T",
   ],
   services: [
     "Filmări și fotografii imobiliare cu dronă",
     "Reclame și marketing aerian",
     "Filmări cu dronă pentru nunți și evenimente",
-    "Filmări industriale și construcții",
+    "Filmări industriale, termale și randare 3D",
+    "Filmări FPV și 360° imersive",
     "Videoclipuri corporate aeriene",
   ],
 } as const;

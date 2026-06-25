@@ -21,7 +21,7 @@ export default function About() {
               Drone Scope este studioul de <strong className="text-text font-medium">filmări cu dronă și fotografii aeriene</strong> din Constanța, cu peste 10 ani de experiență în capturarea unor imagini care depășesc așteptările. Oferim servicii profesionale de video și foto aerian pentru clienți din Constanța, pe litoral și în toată România.
             </p>
             <p>
-              Lucrăm cu agenții imobiliare, organizatori de nunți, dezvoltatori și branduri care au nevoie de perspective aeriene memorabile. Fiecare proiect — de la o vilă din Mamaia Nord la un șantier industrial din Portul Constanța — primește aceeași atenție la detalii și același standard cinematografic.
+              Lucrăm cu agenții imobiliare, organizatori de nunți, dezvoltatori și branduri care au nevoie de perspective aeriene memorabile. Flota noastră — Matrice 4T pentru termal și randare 3D, Mavic 4 Pro și Mini 5 Pro pentru cinematic, Avata 360 pentru FPV și filmări 360° — ne permite să livrăm soluția potrivită, de la o vilă din Mamaia Nord la un șantier industrial din Portul Constanța.
             </p>
             <p className="text-sm">
               <span className="text-text-secondary">Zone deservite: </span>

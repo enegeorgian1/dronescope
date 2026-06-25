@@ -119,7 +119,7 @@ export const catCostaFilmareArticol: BlogArticle = {
             [
               { type: "text", content: "Folosim echipament " },
               { type: "link", content: "DJI profesional", href: "https://www.dji.com/", external: true },
-              { type: "text", content: " — Inspire 3 pentru producții cinematografice, Air 3S pentru proiecte agile. Diferența de calitate se vede în detalii: dynamic range, stabilizare, rezoluție 4K/6K. Nu comparăm prețul cu cineva care zboară cu o dronă de consum." },
+              { type: "text", content: " — Matrice 4T pentru termal și randare 3D, Mavic 4 Pro pentru cinematic, Mini 5 Pro pentru agilitate, Avata 360 pentru FPV și 360°. Diferența se vede în rezultat, nu doar în preț." },
             ],
           ],
         },
@@ -165,7 +165,7 @@ export const catCostaFilmareArticol: BlogArticle = {
       list: [
         "Planificare și consultație pre-proiect",
         "Autorizații CAA + asigurare 2M EUR",
-        "Filmare 4K cu DJI Inspire 3 / Air 3S",
+        "Filmare 4K cu Mavic 4 Pro / Mini 5 Pro (sau Matrice 4T la proiecte complexe)",
         "Color grading și stabilizare profesională",
         "2 runde de revizii incluse",
         "Drepturi comerciale complete",
@@ -316,7 +316,7 @@ export const catCostaFilmareArticol: BlogArticle = {
     },
     {
       name: "Filmare și livrare",
-      text: "Efectuăm filmările cu echipament DJI profesional, edităm materialul și livrăm fișierele finale cu 2 runde de revizii incluse.",
+      text: "Efectuăm filmările cu flota DJI (Matrice 4T, Mavic 4 Pro, Mini 5 Pro, Avata 360), edităm materialul și livrăm fișierele finale cu 2 runde de revizii incluse.",
     },
   ],
 };

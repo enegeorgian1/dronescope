@@ -263,7 +263,7 @@ export const fotografiiImobiliareArticol: BlogArticle = {
     },
     {
       name: "Filmare aeriană pe locație",
-      text: "1–2 ore, toate unghiurile, echipament DJI 4K, pilot autorizat CAA.",
+      text: "1–2 ore, toate unghiurile, Mavic 4 Pro sau Mini 5 Pro, pilot autorizat CAA.",
     },
     {
       name: "Livrare materiale gata de publicat",

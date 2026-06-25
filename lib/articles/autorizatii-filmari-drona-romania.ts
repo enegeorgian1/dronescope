@@ -269,7 +269,7 @@ export const autorizatiiDronaArticol: BlogArticle = {
         "Da. Piloți certificați CAA, operator înregistrat, asigurare 2 milioane EUR, experiență cu zone sensibile pe litoral. Prezentăm documentele la cerere.",
     },
     {
-      question: "Pot folosi o dronă DJI Mini fără autorizație?",
+      question: "Pot folosi o dronă DJI Mini 5 Pro fără autorizație?",
       answer:
         "Masa dronei nu elimină obligația de autorizare pentru operațiuni comerciale. Regulile depind de categorie, zonă și tip de operațiune — nu doar de model.",
     },

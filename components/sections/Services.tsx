@@ -13,7 +13,7 @@ export default function Services() {
             <SectionTitle>Servicii de filmări cu dronă<br />în Constanța și România.</SectionTitle>
           </div>
           <p className="max-w-sm text-text-secondary mt-4 md:mt-0">
-            Fotografii și videoclipuri aeriene adaptate nevoilor tale — de la o sesiune rapidă pentru imobiliare la producții cinematografice complete.{" "}
+            Cinematic, termal, randare 3D, FPV și 360° — Matrice 4T, Mavic 4 Pro, Mini 5 Pro, Avata 360.{" "}
             <Link href="/servicii" className="link-accessible">
               Vezi toate serviciile
             </Link>

@@ -23,7 +23,7 @@ export default function Footer() {
           </Link>
           <p className="mt-4 max-w-sm text-text-secondary text-sm">
             Filmări cu dronă și fotografii aeriene în Constanța, Mamaia și toată România.
-            Servicii profesionale pentru imobiliare, nunți, evenimente și construcții — piloți autorizați CAA.
+            Termal, randare 3D, cinematic, FPV și 360° — Matrice 4T, Mavic 4 Pro, Mini 5 Pro, Avata 360. Piloți autorizați CAA.
           </p>
         </div>
 

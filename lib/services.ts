@@ -53,7 +53,7 @@ export const servicePages: ServicePage[] = [
       },
       {
         title: "Calitate cinematografică",
-        desc: "Echipament DJI profesional, color grading și stabilizare pentru un look premium care ridică valoarea percepută.",
+        desc: "Mavic 4 Pro și Mini 5 Pro pentru calitate Hasselblad și sesiuni rapide. Color grading și stabilizare pentru un look premium.",
       },
       {
         title: "Livrare rapidă",
@@ -111,13 +111,13 @@ export const servicePages: ServicePage[] = [
     ],
     eyebrow: "MARKETING • TURISM • SOCIAL MEDIA",
     intro: [
-      "Într-o lume în care atenția se măsoară în secunde, filmările aeriene cu dronă sunt unul dintre cele mai puternice instrumente de marketing vizual. De la spoturi publicitare la conținut pentru Instagram și TikTok, perspectivele de la înălțime captează instant.",
-      "Colaborăm cu branduri din turism, HoReCa, retail și evenimente din Constanța și pe tot litorul românesc. Producem materiale adaptate fiecărui canal: 16:9 pentru YouTube, 9:16 pentru Reels, sau formate personalizate pentru campanii plătite.",
+      "Într-o lume în care atenția se măsoară în secunde, filmările aeriene cu dronă sunt unul dintre cele mai puternice instrumente de marketing vizual. Cu Mavic 4 Pro livrăm cinematic clasic; cu Avata 360 adăugăm FPV dinamic și filmări 360° imersive — conținut imposibil de replicat cu telefonul.",
+      "Colaborăm cu branduri din turism, HoReCa, retail și evenimente din Constanța și pe tot litorul românesc. Producem materiale adaptate fiecărui canal: 16:9 pentru YouTube, 9:16 pentru Reels, 360° pentru VR și formate personalizate pentru campanii plătite.",
     ],
     benefits: [
       {
-        title: "Impact vizual imediat",
-        desc: "Imaginile aeriene opresc scroll-ul și cresc rata de engagement cu până la 40% față de conținut standard.",
+        title: "FPV & 360° cu Avata 360",
+        desc: "Shot-uri dinamice first-person, treceri creative și video imersiv VR-ready — impact viral pe TikTok, Reels și campanii premium.",
       },
       {
         title: "Versatilitate multi-canal",
@@ -134,7 +134,7 @@ export const servicePages: ServicePage[] = [
     ],
     includes: [
       "Brief creativ și plan de filmare",
-      "Filmări aeriene 4K cu echipament DJI",
+      "Filmări 4K cinematic + opțional FPV/360° cu Avata 360",
       "Filmări la sol complementare (opțional)",
       "Montaj profesional cu muzică licențiată",
       "Export multi-format (16:9, 9:16, 1:1)",
@@ -142,10 +142,11 @@ export const servicePages: ServicePage[] = [
     ],
     useCases: [
       "Promovare hoteluri și stațiuni pe litoral",
+      "Spoturi FPV și 360° pentru branduri creative",
       "Lansări de produse și evenimente de brand",
       "Campanii de turism pentru primării și agenții",
-      "Reclame pentru restaurante, cluburi și beach-uri",
-      "Conținut recurent pentru social media",
+      "Tururi virtuale imersive HoReCa",
+      "Conținut viral pentru social media",
     ],
     faqs: [
       {
@@ -244,52 +245,54 @@ export const servicePages: ServicePage[] = [
     title: "Filmări Industriale & Construcții cu Dronă",
     metaTitle: "Filmări Industriale & Construcții cu Dronă | Inspecții Aeriene",
     metaDescription:
-      "Documentare șantier, inspecții aeriene, time-lapse și filmări industriale cu dronă în Constanța și România. Port, turbine eoliene, parcuri industriale. Piloți autorizați CAA.",
+      "Inspecții termale, randare 3D, fotogrammetrie și documentare șantier cu DJI Matrice 4T în Constanța. Port, turbine, construcții. Piloți autorizați CAA.",
     keywords: [
       "filmări industriale dronă",
-      "inspecții aeriene dronă",
+      "inspecții termale dronă",
+      "randare 3D dronă",
+      "fotogrammetrie dronă",
+      "DJI Matrice 4T",
       "documentare șantier dronă",
-      "filmări dronă construcții",
-      "time-lapse șantier",
       "filmări port Constanța",
     ],
-    eyebrow: "INDUSTRIAL • CONSTRUCȚII • INFRASTRUCTURĂ",
+    eyebrow: "INDUSTRIAL • TERMAL • RANDARE 3D",
     intro: [
-      "Proiectele industriale și de construcții au nevoie de documentare precisă, repetabilă și sigură. Filmările cu dronă elimină riscurile inspecțiilor manuale la înălțime și oferă o imagine completă a progresului — ideală pentru rapoarte către investitori, autorități sau echipe de management.",
-      "Operăm în Portul Constanța, parcuri industriale, șantiere de infrastructură, parcuri eoliene și proiecte de dezvoltare imobiliară. Oferim vizite unice sau programe recurente de documentare (săptămânal, lunar) cu time-lapse.",
+      "Proiectele industriale și de construcții cer mai mult decât video frumos — cer date precise. Cu DJI Matrice 4T oferim imagistică termică, fotogrammetrie, modele 3D, hărți ortofoto și inspecții la distanță sigură. Eliminăm riscurile echipelor la înălțime și livrăm materiale pentru BIM, rapoarte investitori și autorități.",
+      "Operăm în Portul Constanța, parcuri industriale, șantiere, parcuri eoliene și infrastructură critică. Programe unice sau recurente (săptămânal/lunar) cu time-lapse și comparare termică în timp.",
     ],
     benefits: [
       {
-        title: "Siguranță sporită",
-        desc: "Inspecții la înălțime fără expunerea personalului la riscuri — mai rapid și mai ieftin decât metodele tradiționale.",
+        title: "Imagistică termică (thermal)",
+        desc: "Detectăm pierderi de căldură, defecte la panouri solare, infiltrații pe acoperișuri și puncte fierbinți la instalații electrice — fără acces fizic la înălțime.",
       },
       {
-        title: "Documentare obiectivă",
-        desc: "Imagini și video timestamped pentru rapoarte de progres, dispute contractuale sau prezentări investitori.",
+        title: "Randare 3D & fotogrammetrie",
+        desc: "Modele point cloud, mesh 3D, ortofoto și măsurători de volum (cut & fill) pentru șantiere, terenuri și proiecte de dezvoltare.",
       },
       {
-        title: "Time-lapse & monitorizare",
-        desc: "Programe recurente de filmare care arată evoluția șantierului de la fundație la finisaje.",
+        title: "Inspecții industriale la distanță",
+        desc: "Zoom optic puternic pentru turbine eoliene, linii electrice, coșuri și structuri metalice — fără oprirea producției.",
       },
       {
-        title: "Experiență în zone sensibile",
-        desc: "Autorizații pentru zboruri în zone industriale, portuare și de infrastructură critică.",
+        title: "Monitorizare & time-lapse",
+        desc: "Zboruri programate (waypoints) repetabile pentru progres șantier documentat obiectiv, cu date georeferențiate.",
       },
     ],
     includes: [
-      "Evaluare locație și plan de zbor autorizat",
-      "Fotografii și video 4K cu coordonate GPS",
-      "Rapoarte vizuale de progres (opțional)",
+      "Evaluare locație și plan de zbor autorizat CAA",
+      "Captură RGB + termală cu Matrice 4T",
+      "Procesare fotogrammetrie și modele 3D (la cerere)",
+      "Rapoarte vizuale și termice de progres",
       "Time-lapse multi-vizită (opțional)",
-      "Livrare în format arhivă + web",
-      "Autorizații CAA și asigurare industrială",
+      "Livrare arhivă + web + formate CAD/BIM compatibile",
     ],
     useCases: [
-      "Monitorizare șantiere rezidențiale și comerciale",
-      "Inspecții parcuri eoliene și linii electrice",
-      "Documentare portuară și logistică",
-      "Evaluare terenuri și topografie vizuală",
-      "Materiale pentru licitații și prezentări investitori",
+      "Randare 3D șantiere și măsurători de volum",
+      "Inspecții termice panouri solare și acoperișuri",
+      "Monitorizare parcuri eoliene și linii electrice",
+      "Cartografiere terenuri și ortofoto",
+      "Documentare portuară și infrastructură",
+      "Rapoarte tehnice pentru investitori și autorități",
     ],
     faqs: [
       {
@@ -306,6 +309,11 @@ export const servicePages: ServicePage[] = [
         question: "Materialele pot fi folosite în rapoarte oficiale?",
         answer:
           "Da. Livrăm fișiere cu metadata, dată și rezoluție potrivite pentru documentație tehnică și prezentări formale.",
+      },
+      {
+        question: "Oferiți inspecții termale și randare 3D?",
+        answer:
+          "Da. Cu DJI Matrice 4T realizăm captură termică, fotogrammetrie, modele 3D, ortofoto și măsurători de volum. Ideal pentru șantiere, industrial și energetic.",
       },
     ],
     relatedSlugs: ["videoclipuri-corporate", "filmari-imobiliare"],

@@ -1,4 +1,5 @@
 import { siteConfig } from "@/lib/seo";
+import { blogAuthor } from "@/lib/blog-author";
 import { getArticleUrl, type BlogArticle } from "@/lib/blog";
 
 interface ArticleStructuredDataProps {
@@ -20,8 +21,9 @@ export default function ArticleStructuredData({ article }: ArticleStructuredData
     inLanguage: siteConfig.language,
     author: {
       "@type": "Organization",
-      name: siteConfig.name,
+      name: blogAuthor.name,
       url: siteConfig.url,
+      description: blogAuthor.bio,
     },
     publisher: {
       "@type": "Organization",
@@ -32,7 +34,7 @@ export default function ArticleStructuredData({ article }: ArticleStructuredData
         url: `${siteConfig.url}/icon.svg`,
       },
     },
-    image: siteConfig.ogImage,
+    image: article.images?.[0]?.src ?? siteConfig.ogImage,
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": url,
@@ -44,28 +46,43 @@ export default function ArticleStructuredData({ article }: ArticleStructuredData
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Acasă",
-        item: siteConfig.url,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Blog",
-        item: `${siteConfig.url}/blog`,
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: article.title,
-        item: url,
-      },
+      { "@type": "ListItem", position: 1, name: "Acasă", item: siteConfig.url },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${siteConfig.url}/blog` },
+      { "@type": "ListItem", position: 3, name: article.title, item: url },
     ],
   };
 
-  const schemas = [articleSchema, breadcrumb];
+  const schemas: object[] = [articleSchema, breadcrumb];
+
+  if (article.faqs && article.faqs.length > 0) {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: article.faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    });
+  }
+
+  if (article.howToSteps && article.howToSteps.length > 0) {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      name: `Cum obții o ofertă pentru ${article.title}`,
+      description: article.metaDescription,
+      step: article.howToSteps.map((step, index) => ({
+        "@type": "HowToStep",
+        position: index + 1,
+        name: step.name,
+        text: step.text,
+      })),
+    });
+  }
 
   return (
     <>

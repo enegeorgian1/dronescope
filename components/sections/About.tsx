@@ -1,6 +1,5 @@
 import Link from "next/link";
 import SectionTitle from "@/components/ui/SectionTitle";
-import { siteConfig } from "@/lib/seo";
 
 const stats = [
   { number: "10+", label: "Ani de experiență" },
@@ -38,11 +37,23 @@ export default function About() {
                 Năvodari
               </Link>
               {" • "}
+              <Link href="/filmari-drona-ovidiu" className="link-accessible">
+                Ovidiu
+              </Link>
+              {" • "}
               <Link href="/filmari-drona-eforie" className="link-accessible">
                 Eforie
               </Link>
               {" • "}
-              {siteConfig.serviceAreas.slice(4).join(" • ")}
+              <Link href="/filmari-drona-mangalia" className="link-accessible">
+                Mangalia
+              </Link>
+              {" • "}
+              <Link href="/filmari-drona-bucuresti" className="link-accessible">
+                București
+              </Link>
+              {" • "}
+              Mamaia Nord • Costinești
             </p>
           </div>
         </div>

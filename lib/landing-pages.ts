@@ -1,7 +1,10 @@
+import { filmariDronaBucuresti } from "@/lib/landing-pages/filmari-drona-bucuresti";
 import { filmariDronaConstanta } from "@/lib/landing-pages/filmari-drona-constanta";
 import { filmariDronaEforie } from "@/lib/landing-pages/filmari-drona-eforie";
 import { filmariDronaMamaia } from "@/lib/landing-pages/filmari-drona-mamaia";
+import { filmariDronaMangalia } from "@/lib/landing-pages/filmari-drona-mangalia";
 import { filmariDronaNavodari } from "@/lib/landing-pages/filmari-drona-navodari";
+import { filmariDronaOvidiu } from "@/lib/landing-pages/filmari-drona-ovidiu";
 import { filmariImobiliareMamaia } from "@/lib/landing-pages/filmari-imobiliare-mamaia";
 import { inspectiiTermaleConstanta } from "@/lib/landing-pages/inspectii-termale-constanta";
 import { nuntaCuDronaConstanta } from "@/lib/landing-pages/nunta-cu-drona-constanta";
@@ -14,7 +17,10 @@ export const landingPages: LandingPage[] = [
   filmariDronaConstanta,
   filmariDronaMamaia,
   filmariDronaNavodari,
+  filmariDronaOvidiu,
   filmariDronaEforie,
+  filmariDronaMangalia,
+  filmariDronaBucuresti,
   filmariImobiliareMamaia,
   nuntaCuDronaConstanta,
   inspectiiTermaleConstanta,

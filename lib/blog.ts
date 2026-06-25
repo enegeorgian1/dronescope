@@ -1,5 +1,6 @@
 import { siteConfig } from "@/lib/seo";
 import { catCostaFilmareArticol } from "@/lib/articles/cat-costa-filmare-cu-drona-constanta";
+import { nuntaCuDronaArticol } from "@/lib/articles/nunta-cu-drona-pe-litoral";
 
 export type RichSegment =
   | { type: "text"; content: string }
@@ -128,31 +129,7 @@ const legacyArticles: BlogArticle[] = [
       },
     ],
   },
-  {
-    slug: "nunta-cu-drona-pe-litoral",
-    title: "Nuntă cu dronă pe litoral: ce trebuie să știi",
-    metaTitle: "Nuntă cu Dronă pe Litoral 2026 • Prețuri & Locații | Drone Scope",
-    metaDescription:
-      "Nuntă cu dronă în Constanța și Mamaia 2026: prețuri de la 1.200 lei, siguranță, locații spectaculoase. Piloți autorizați CAA. Solicită ofertă gratuită!",
-    keywords: ["nuntă cu dronă Constanța", "nunți cu dronă", "filmare dronă nuntă Mamaia"],
-    excerpt:
-      "Ghid practic pentru cupluri care vor filmări aeriene la nuntă pe litoral — costuri, siguranță și coordonare cu echipa foto.",
-    intro: text(
-      "Nuntă cu dronă pe litoral adaugă o dimensiune cinematică pe care niciun cameraman la sol nu o poate reproduce. De la Mamaia la Vama Veche, decorul natural face restul.",
-      " Articol extins în pregătire — vezi serviciul nostru de nunți și evenimente pentru detalii."
-    ),
-    publishedAt: "2026-06-25",
-    readTime: 6,
-    relatedServiceSlug: "nunti-evenimente",
-    sections: [
-      {
-        heading: "Buget orientativ 2026",
-        paragraphs: text(
-          "Filmările cu dronă la nuntă pe litoral pornesc de la 1.200–2.000 lei, în funcție de durată și montaj. Include consultație, filmare, montaj cinematic și 2 runde de revizii."
-        ),
-      },
-    ],
-  },
+
   {
     slug: "autorizatii-filmari-drona-romania",
     title: "Autorizații legale pentru filmări cu dronă în România",
@@ -187,6 +164,7 @@ const legacyArticles: BlogArticle[] = [
 
 export const blogArticles: BlogArticle[] = [
   catCostaFilmareArticol,
+  nuntaCuDronaArticol,
   ...legacyArticles,
 ];
 

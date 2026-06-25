@@ -2,7 +2,7 @@ import Link from "next/link";
 import DroneLogo from "@/components/ui/DroneLogo";
 import { landingPages } from "@/lib/landing-pages";
 import { servicePages } from "@/lib/services";
-import { siteConfig } from "@/lib/seo";
+import { hasGoogleBusiness, siteConfig } from "@/lib/seo";
 
 const footerLinks = {
   companie: [
@@ -78,14 +78,16 @@ export default function Footer() {
               <a href="tel:+40729626932" className="block underline-offset-2 hover:text-accent-light hover:underline transition-colors">0729 626 932</a>
               <a href="https://wa.me/40729626932" target="_blank" rel="noopener noreferrer" className="block underline-offset-2 hover:text-accent-light hover:underline transition-colors">WhatsApp</a>
               <a href="mailto:contact@dronescope.ro" className="block underline-offset-2 hover:text-accent-light hover:underline transition-colors">contact@dronescope.ro</a>
-              <a
-                href={siteConfig.googleBusiness.reviewUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block underline-offset-2 hover:text-accent-light hover:underline transition-colors"
-              >
-                Recenzie Google
-              </a>
+              {hasGoogleBusiness() && (
+                <a
+                  href={siteConfig.googleBusiness.reviewUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block underline-offset-2 hover:text-accent-light hover:underline transition-colors"
+                >
+                  Recenzie Google
+                </a>
+              )}
             </div>
             <div className="font-semibold mb-3 mt-6">Locație</div>
             <div className="text-text-secondary">

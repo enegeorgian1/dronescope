@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star, ExternalLink } from "lucide-react";
 import SectionTitle from "@/components/ui/SectionTitle";
 import { testimonials } from "@/lib/testimonials";
-import { siteConfig } from "@/lib/seo";
+import { hasGoogleBusiness, siteConfig } from "@/lib/seo";
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -136,17 +136,19 @@ export default function Testimonials() {
           </div>
         </div>
 
-        <div className="mt-10 text-center">
-          <a
-            href={siteConfig.googleBusiness.reviewUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent-light transition-colors"
-          >
-            Lasă o recenzie pe Google
-            <ExternalLink className="w-4 h-4" aria-hidden="true" />
-          </a>
-        </div>
+        {hasGoogleBusiness() && (
+          <div className="mt-10 text-center">
+            <a
+              href={siteConfig.googleBusiness.reviewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent-light transition-colors"
+            >
+              Lasă o recenzie pe Google
+              <ExternalLink className="w-4 h-4" aria-hidden="true" />
+            </a>
+          </div>
+        )}
       </div>
     </section>
   );

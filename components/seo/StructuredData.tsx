@@ -1,4 +1,4 @@
-import { siteConfig } from "@/lib/seo";
+import { hasGoogleBusiness, siteConfig } from "@/lib/seo";
 import { faqs } from "@/lib/faq";
 import { servicePages, getServiceUrl } from "@/lib/services";
 import { getAggregateRating, testimonials } from "@/lib/testimonials";
@@ -8,9 +8,9 @@ export default function StructuredData() {
 
   const sameAs = [
     siteConfig.social.whatsapp,
-    siteConfig.googleBusiness.mapsUrl,
     siteConfig.social.instagram,
     siteConfig.social.facebook,
+    ...(hasGoogleBusiness() ? [siteConfig.googleBusiness.mapsUrl] : []),
   ].filter(Boolean);
 
   const localBusiness = {

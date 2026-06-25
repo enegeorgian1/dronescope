@@ -26,11 +26,11 @@ export const siteConfig = {
     instagram: "https://www.instagram.com/dronescope.ro",
     facebook: "https://www.facebook.com/dronescope.ro",
   },
+  /** Activează după ce îți creezi profilul Google Business (mapsUrl + reviewUrl din GBP). */
   googleBusiness: {
-    mapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=Drone+Scope+filmari+drona+Constanta",
-    reviewUrl:
-      "https://www.google.com/maps/search/?api=1&query=Drone+Scope+filmari+drona+Constanta",
+    enabled: false,
+    mapsUrl: "",
+    reviewUrl: "",
   },
   serviceAreas: [
     "Constanța",
@@ -87,3 +87,8 @@ export const siteConfig = {
     "Videoclipuri corporate aeriene",
   ],
 } as const;
+
+export function hasGoogleBusiness(): boolean {
+  const gbp = siteConfig.googleBusiness;
+  return gbp.enabled && gbp.mapsUrl.length > 0 && gbp.reviewUrl.length > 0;
+}

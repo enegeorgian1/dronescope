@@ -34,7 +34,15 @@ export default function About() {
                 Mamaia
               </Link>
               {" • "}
-              {siteConfig.serviceAreas.slice(2).join(" • ")}
+              <Link href="/filmari-drona-navodari" className="link-accessible">
+                Năvodari
+              </Link>
+              {" • "}
+              <Link href="/filmari-drona-eforie" className="link-accessible">
+                Eforie
+              </Link>
+              {" • "}
+              {siteConfig.serviceAreas.slice(4).join(" • ")}
             </p>
           </div>
         </div>

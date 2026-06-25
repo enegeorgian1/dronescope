@@ -13,11 +13,8 @@ export default function Hero() {
     window.open(`https://wa.me/40729626932?text=${message}`, "_blank");
   };
 
-  const scrollToPortfolio = () => {
-    const el = document.getElementById("portofoliu");
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+  const goToPortfolio = () => {
+    window.location.href = "/portofoliu";
   };
 
   return (
@@ -63,7 +60,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
             type="button"
-            onClick={scrollToPortfolio}
+            onClick={goToPortfolio}
             className="btn-primary text-base px-10 py-4 group flex items-center justify-center gap-3"
           >
             VEZI PORTFOLIUL

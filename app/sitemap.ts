@@ -2,6 +2,7 @@ import { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/seo";
 import { getAllArticleSlugs, getArticleUrl } from "@/lib/blog";
 import { landingPages } from "@/lib/landing-pages";
+import { getAllProjectSlugs, getProjectUrl } from "@/lib/portfolio";
 import { getAllServiceSlugs, getServiceUrl } from "@/lib/services";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -28,6 +29,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
+  const portfolioEntries = [
+    {
+      url: `${siteConfig.url}/portofoliu`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
+    },
+    ...getAllProjectSlugs().map((slug) => ({
+      url: getProjectUrl(slug),
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.65,
+    })),
+  ];
+
   return [
     {
       url: siteConfig.url,
@@ -48,6 +64,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     ...landingEntries,
+    ...portfolioEntries,
     ...serviceEntries,
     ...blogEntries,
   ];

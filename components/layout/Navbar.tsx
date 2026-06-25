@@ -11,7 +11,8 @@ const navLinks = [
   { href: "/#despre", label: "Despre noi" },
   { href: "/servicii", label: "Servicii" },
   { href: "/#proces", label: "Procesul nostru" },
-  { href: "/#portofoliu", label: "Portofoliu" },
+  { href: "/portofoliu", label: "Portofoliu" },
+  { href: "/blog", label: "Blog" },
   { href: "/#testimoniale", label: "Testimoniale" },
   { href: "/#contact", label: "Contact" },
 ];

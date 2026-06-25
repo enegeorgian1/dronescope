@@ -6,6 +6,7 @@ const footerLinks = {
   companie: [
     { href: "/#despre", label: "Despre noi" },
     { href: "/servicii", label: "Servicii" },
+    { href: "/blog", label: "Blog" },
     { href: "/#portofoliu", label: "Portofoliu" },
     { href: "/#proces", label: "Proces" },
     { href: "/#faq", label: "Întrebări frecvente" },

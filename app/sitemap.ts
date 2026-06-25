@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/seo";
+import { getAllArticleSlugs, getArticleUrl } from "@/lib/blog";
 import { getAllServiceSlugs, getServiceUrl } from "@/lib/services";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -10,6 +11,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.8,
+  }));
+
+  const blogEntries = getAllArticleSlugs().map((slug) => ({
+    url: getArticleUrl(slug),
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
   }));
 
   return [
@@ -25,6 +33,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.9,
     },
+    {
+      url: `${siteConfig.url}/blog`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
     ...serviceEntries,
+    ...blogEntries,
   ];
 }

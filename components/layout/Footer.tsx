@@ -19,8 +19,8 @@ export default function Footer() {
             <DroneLogo size={24} />
           </a>
           <p className="mt-4 max-w-sm text-text-secondary text-sm">
-            Filmări și fotografii aeriene premium cu dronă.
-            Viziune de la înălțime pentru proiecte care merită să fie văzute altfel.
+            Filmări cu dronă și fotografii aeriene în Constanța, Mamaia și toată România.
+            Servicii profesionale pentru imobiliare, nunți, evenimente și construcții — piloți autorizați CAA.
           </p>
         </div>
 

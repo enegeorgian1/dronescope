@@ -48,8 +48,7 @@ export default function Clients() {
           <div className="uppercase tracking-[3px] text-xs text-accent mb-3">ÎNCREDERE</div>
           <SectionTitle>Au ales Drone Scope</SectionTitle>
           <p className="mt-4 max-w-2xl mx-auto text-text-secondary text-[15px]">
-            Colaborăm cu agenții imobiliare de top, organizatori de evenimente premium, 
-            companii industriale și branduri care înțeleg puterea unei perspective unice.
+            Agenții imobiliare, organizatori de nunți, companii industriale și branduri din Constanța și din țară ne aleg pentru filmări aeriene profesionale și livrare la timp, de fiecare dată.
           </p>
         </div>
 

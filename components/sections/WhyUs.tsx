@@ -52,8 +52,8 @@ export default function WhyUs() {
         <div className="text-center mb-14">
           <div className="uppercase tracking-[3px] text-xs text-accent mb-3">DE CE NOI</div>
           <SectionTitle>De ce clienții premium<br />ne aleg pe noi.</SectionTitle>
-          <p className="mt-4 max-w-lg mx-auto text-text-secondary text-[15px]">
-            Nu oferim doar imagini cu dronă. Oferim o experiență premium, rezultate concrete și parteneriat pe termen lung.
+          <p className="mt-4 max-w-2xl mx-auto text-text-secondary text-[15px]">
+            Suntem alegerea preferată pentru filmări cu dronă în Constanța și pe litoral — nu doar imagini aeriene, ci o experiență premium, rezultate concrete și parteneriat pe termen lung cu agenții, dezvoltatori și organizatori de evenimente.
           </p>
         </div>
 

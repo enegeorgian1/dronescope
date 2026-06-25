@@ -2,24 +2,24 @@ import SectionTitle from "@/components/ui/SectionTitle";
 
 const services = [
   {
-    title: "Imobiliare",
-    desc: "Fotografii și videoclipuri aeriene care vând proprietăți. Ideal pentru agenții și dezvoltatori care vor să iasă în evidență.",
+    title: "Filmări Imobiliare cu Dronă",
+    desc: "Fotografii și videoclipuri aeriene care vând proprietăți mai rapid. Ideal pentru agenții imobiliare, dezvoltatori și proprietari din Constanța, Mamaia, Năvodari sau Eforie — tururi aeriene, vedere la mare și prezentări premium.",
   },
   {
-    title: "Reclame & Marketing",
-    desc: "Conținut cinematic pentru campanii, spoturi publicitare și materiale de promovare premium.",
+    title: "Reclame & Marketing Aerial",
+    desc: "Spoturi publicitare și conținut video aerian pentru campanii de marketing, turism pe litoral, lansări de produse și promovare pe social media. Filmări cu dronă cu impact vizual puternic.",
   },
   {
-    title: "Nunți & Evenimente",
-    desc: "Povești aeriene emoționante care surprind magia momentului din unghiuri imposibil de atins la sol.",
+    title: "Nunți & Evenimente cu Dronă",
+    desc: "Filmări aeriene la nuntă, botez sau eveniment corporate — surprindem emoția momentului din unghiuri imposibil de atins la sol. Experiență vastă pe litoral: Mamaia, Vama Veche, locații private.",
   },
   {
     title: "Industrial & Construcții",
-    desc: "Documentare de progres, inspecții, time-lapse și materiale pentru investitori și autorități.",
+    desc: "Documentare de progres șantier, inspecții aeriene, time-lapse și materiale pentru investitori. Filmări cu dronă pentru porturi, parcuri industriale, turbine eoliene și proiecte de infrastructură.",
   },
   {
     title: "Videoclipuri Corporate",
-    desc: "Prezentări de companie, tururi de facilități și conținut de brand cu impact vizual puternic.",
+    desc: "Prezentări de companie, tururi aeriene de facilități și conținut de brand profesional. Videoclipuri aeriene adaptate pentru site-uri web, LinkedIn și materiale de vânzare B2B.",
   },
 ];
 
@@ -30,10 +30,10 @@ export default function Services() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
             <div className="uppercase tracking-[3px] text-xs text-accent mb-3">CE OFERIM</div>
-            <SectionTitle>Servicii premium,<br />rezultate de neuitat.</SectionTitle>
+            <SectionTitle>Servicii de filmări cu dronă<br />în Constanța și România.</SectionTitle>
           </div>
           <p className="max-w-sm text-text-secondary mt-4 md:mt-0">
-            Fiecare serviciu este adaptat la nevoile tale specifice și livrat la cele mai înalte standarde cinematografice.
+            Fotografii și videoclipuri aeriene adaptate nevoilor tale — de la o sesiune rapidă pentru imobiliare la producții cinematografice complete. Piloți autorizați CAA, echipament DJI profesional.
           </p>
         </div>
 

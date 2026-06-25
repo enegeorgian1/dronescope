@@ -68,7 +68,7 @@ export default function Portfolio() {
             <SectionTitle>Lucrări care vorbesc<br />de la sine.</SectionTitle>
           </div>
           <p className="max-w-sm text-text-secondary mt-4 md:mt-0">
-            O selecție din proiectele noastre — fotografii și videoclipuri aeriene de înaltă calitate.
+            Portofoliu de filmări cu dronă din Constanța, Mamaia, litoral și proiecte naționale — imobiliare, nunți, evenimente, industrial și reclame.
           </p>
         </div>
 

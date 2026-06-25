@@ -4,22 +4,22 @@ const steps = [
   {
     number: "01",
     title: "Consultație & Planificare",
-    desc: "Discutăm detaliile proiectului, locația, obiectivele și termenele. Stabilim unghiurile și stilul dorit.",
+    desc: "Discutăm detaliile filmării cu dronă: locația (Constanța, Mamaia, litoral sau altă zonă), obiectivele și termenele. Stabilim unghiurile aeriene și stilul dorit pentru fotografii sau videoclipuri aeriene.",
   },
   {
     number: "02",
     title: "Pregătire & Autorizații",
-    desc: "Obținem toate aprobările necesare (CAA, autorități locale) și planificăm zborul în funcție de condițiile meteo.",
+    desc: "Obținem toate aprobările necesare — CAA, autorități locale — și planificăm zborul în funcție de condițiile meteo. Piloți autorizați, cu experiență pe litoral și în zone sensibile.",
   },
   {
     number: "03",
     title: "Captură & Post-producție",
-    desc: "Efectuăm filmările cu echipament profesional DJI. Edităm materialul la standarde cinematografice.",
+    desc: "Efectuăm filmările aeriene cu echipament profesional DJI (Inspire 3, Air 3S). Edităm materialul la standarde cinematografice: color grading, stabilizare și montaj.",
   },
   {
     number: "04",
     title: "Livrare & Revizii",
-    desc: "Livrăm fișierele finale în formatul solicitat + 2 runde de revizii incluse pentru perfecțiune.",
+    desc: "Livrăm fotografiile și videoclipurile finale în formatul solicitat — 4K, RAW sau optimizat pentru web. Includem 2 runde de revizii pentru perfecțiune.",
   },
 ];
 
@@ -28,7 +28,7 @@ export default function Process() {
     <section id="proces" className="section max-w-5xl mx-auto px-6">
       <div className="text-center mb-16">
         <div className="uppercase tracking-[3px] text-xs text-accent mb-3">CUM LUCRĂM</div>
-        <SectionTitle>Un proces clar.<br />Rezultate predictibile.</SectionTitle>
+        <SectionTitle>Cum realizăm filmările cu dronă.<br />Un proces clar, rezultate predictibile.</SectionTitle>
       </div>
 
       <div className="space-y-6">

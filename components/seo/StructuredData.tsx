@@ -17,7 +17,10 @@ export default function StructuredData() {
     currenciesAccepted: "RON",
     paymentAccepted: "Cash, Bank Transfer",
     areaServed: [
-      { "@type": "City", name: "Constanța" },
+      ...siteConfig.serviceAreas.map((area) => ({
+        "@type": "City" as const,
+        name: area,
+      })),
       { "@type": "AdministrativeArea", name: "Constanța" },
       { "@type": "Country", name: "România" },
     ],

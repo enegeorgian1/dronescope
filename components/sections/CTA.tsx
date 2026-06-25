@@ -37,7 +37,7 @@ export default function CTA() {
               Hai să transformăm proiectul tău<br className="hidden md:block" /> într-o poveste aeriană.
             </h2>
             <p className="text-text-secondary max-w-lg mx-auto mb-8 text-[15px]">
-              Răspundem în maxim 2 ore. Ofertă personalizată, fără obligații.
+              Ai nevoie de filmări cu dronă sau fotografii aeriene în Constanța sau pe litoral? Răspundem în maxim 2 ore cu o ofertă personalizată, fără obligații.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -65,8 +65,7 @@ export default function Equipment() {
           <div className="uppercase tracking-[3px] text-xs text-accent mb-3">ECHIPAMENT</div>
           <SectionTitle>Flotă DJI profesională.<br />Rezultate de nivel cinematografic.</SectionTitle>
           <p className="mt-4 max-w-2xl mx-auto text-text-secondary text-[15px]">
-            Folosim exclusiv drone DJI de ultimă generație, calibrate și întreținute profesional. 
-            Fiecare proiect beneficiază de echipamentul potrivit pentru calitatea și tipul de conținut dorit.
+            Pentru fiecare filmare cu dronă în Constanța sau la nivel național, alegem echipamentul DJI potrivit — de la sesiuni imobiliare rapide cu Air 3S la producții cinematografice 8K cu Inspire 3. Calibrare profesională, baterii de rezervă și redundanță completă.
           </p>
         </div>
 

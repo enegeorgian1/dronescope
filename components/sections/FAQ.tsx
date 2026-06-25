@@ -18,9 +18,9 @@ export default function FAQ() {
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-12">
           <div className="uppercase tracking-[3px] text-xs text-accent mb-3">ÎNTREBĂRI FRECVENTE</div>
-          <SectionTitle>Întrebări frecvente</SectionTitle>
-          <p className="mt-4 max-w-md mx-auto text-text-secondary">
-            Răspunsuri la cele mai comune întrebări despre colaborarea cu noi.
+          <SectionTitle>Întrebări frecvente despre filmări cu dronă</SectionTitle>
+          <p className="mt-4 max-w-lg mx-auto text-text-secondary">
+            Răspunsuri la cele mai comune întrebări despre prețuri, autorizații, termene și servicii de filmări aeriene în Constanța și pe litoral.
           </p>
         </div>
 

@@ -43,7 +43,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-5xl px-6 text-center">
         {/* Static above-the-fold copy — no JS animation delay (improves LCP) */}
         <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-1.5 text-xs tracking-[2.5px] mb-8 backdrop-blur-sm">
-          CONSTANȚA • ROMÂNIA • PESTE 10 ANI DE EXCELENȚĂ
+          FILMĂRI CU DRONĂ • CONSTANȚA & LITORAL • PESTE 10 ANI
         </div>
 
         <h1 className="text-6xl md:text-[72px] lg:text-[84px] font-bold tracking-[-3.5px] leading-[1.05] mb-6 text-white">
@@ -51,8 +51,8 @@ export default function Hero() {
         </h1>
 
         <p className="max-w-2xl mx-auto text-2xl md:text-[26px] text-white/90 tracking-tight mb-12">
-          Filmări și fotografii aeriene cinematografice<br className="hidden md:block" />
-          pentru proiecte care merită să fie văzute altfel.
+          Filmări cu dronă și fotografii aeriene în Constanța, Mamaia și pe tot litoralul.<br className="hidden md:block" />
+          Conținut cinematic pentru imobiliare, nunți, evenimente și branduri.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

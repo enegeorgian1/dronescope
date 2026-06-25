@@ -96,7 +96,7 @@ export default function Contact() {
           <div className="uppercase tracking-[3px] text-xs text-accent mb-3">HAIDE SĂ VORBIM</div>
           <SectionTitle className="mb-4">Suntem gata să zburăm pentru proiectul tău.</SectionTitle>
           <p className="text-text-secondary max-w-lg mx-auto">
-            Completează formularul sau scrie-ne direct pe WhatsApp. Răspundem rapid.
+            Solicită o ofertă pentru filmări cu dronă în Constanța, Mamaia sau oriunde în România. Completează formularul sau scrie-ne pe WhatsApp — răspundem în maxim 2 ore.
           </p>
         </div>
 

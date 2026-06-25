@@ -23,6 +23,14 @@ export const siteConfig = {
   },
   social: {
     whatsapp: "https://wa.me/40729626932",
+    instagram: "https://www.instagram.com/dronescope.ro",
+    facebook: "https://www.facebook.com/dronescope.ro",
+  },
+  googleBusiness: {
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Drone+Scope+filmari+drona+Constanta",
+    reviewUrl:
+      "https://www.google.com/maps/search/?api=1&query=Drone+Scope+filmari+drona+Constanta",
   },
   serviceAreas: [
     "Constanța",

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SectionTitle from "@/components/ui/SectionTitle";
 import { siteConfig } from "@/lib/seo";
 
@@ -25,7 +26,15 @@ export default function About() {
             </p>
             <p className="text-sm">
               <span className="text-text-secondary">Zone deservite: </span>
-              {siteConfig.serviceAreas.join(" • ")}
+              <Link href="/filmari-drona-constanta" className="link-accessible">
+                Constanța
+              </Link>
+              {" • "}
+              <Link href="/filmari-drona-mamaia" className="link-accessible">
+                Mamaia
+              </Link>
+              {" • "}
+              {siteConfig.serviceAreas.slice(2).join(" • ")}
             </p>
           </div>
         </div>

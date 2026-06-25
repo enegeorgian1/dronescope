@@ -2,66 +2,10 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { ChevronLeft, ChevronRight, Star, ExternalLink } from "lucide-react";
 import SectionTitle from "@/components/ui/SectionTitle";
-
-interface Testimonial {
-  id: number;
-  name: string;
-  role: string;
-  company: string;
-  location: string;
-  quote: string;
-  rating: number;
-}
-
-const testimonials: Testimonial[] = [
-  {
-    id: 1,
-    name: "Andrei Popescu",
-    role: "Agent Imobiliar Senior",
-    company: "Engel & Völkers Constanța",
-    location: "Constanța",
-    quote: "Colaborarea cu Drone Scope a schimbat complet modul în care prezentăm proprietățile premium. Imaginile aeriene au crescut rata de conversie cu peste 40%. Profesionalism de top.",
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: "Maria & Alexandru Ionescu",
-    role: "Mirii",
-    company: "Nuntă privată",
-    location: "Mamaia",
-    quote: "Filmarea cu dronă a fost momentul care a făcut diferența. Imaginile de la apus deasupra mării sunt pur și simplu de vis. Nu ne imaginam că nunta noastră va arăta atât de cinematografic.",
-    rating: 5,
-  },
-  {
-    id: 3,
-    name: "Daniel Marin",
-    role: "Director Tehnic",
-    company: "DP World Constanța",
-    location: "Portul Constanța",
-    quote: "Aveam nevoie de documentare lunară de progres pe un șantier foarte mare. Drone Scope ne-a livrat imagini clare, consistente și la timp, de fiecare dată. Recomand cu încredere.",
-    rating: 5,
-  },
-  {
-    id: 4,
-    name: "Ioana Radu",
-    role: "Creative Director",
-    company: "BrandVibe Agency",
-    location: "București",
-    quote: "Pentru campania JYSK am avut nevoie de conținut aerian de înaltă calitate în mai multe orașe. Echipa Drone Scope a fost extrem de profesionistă, rapidă și a livrat exact ce am cerut.",
-    rating: 5,
-  },
-  {
-    id: 5,
-    name: "Cristian Dumitrescu",
-    role: "Dezvoltator Imobiliar",
-    company: "Prime Kapital",
-    location: "Ovidiu",
-    quote: "Am lucrat cu mai multe echipe de drone înainte. Drone Scope este clar deasupra. Imaginile au ajutat enorm la vânzarea apartamentelor din faza de pre-lansare. Calitate premium.",
-    rating: 5,
-  },
-];
+import { testimonials } from "@/lib/testimonials";
+import { siteConfig } from "@/lib/seo";
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -86,16 +30,16 @@ export default function Testimonials() {
   const currentTestimonial = testimonials[currentIndex];
 
   const slideVariants = {
-    enter: (direction: number) => ({
-      x: direction > 0 ? 80 : -80,
+    enter: (dir: number) => ({
+      x: dir > 0 ? 80 : -80,
       opacity: 0,
     }),
     center: {
       x: 0,
       opacity: 1,
     },
-    exit: (direction: number) => ({
-      x: direction < 0 ? 80 : -80,
+    exit: (dir: number) => ({
+      x: dir < 0 ? 80 : -80,
       opacity: 0,
     }),
   };
@@ -103,7 +47,6 @@ export default function Testimonials() {
   return (
     <section id="testimoniale" className="section bg-bg border-t border-white/10">
       <div className="max-w-5xl mx-auto px-6">
-        {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
             <div className="uppercase tracking-[3px] text-xs text-accent mb-3">CE SPUN CLIENȚII</div>
@@ -114,7 +57,6 @@ export default function Testimonials() {
           </p>
         </div>
 
-        {/* Carousel */}
         <div className="relative">
           <div className="overflow-hidden rounded-3xl bg-surface border border-white/10">
             <div className="relative min-h-[320px] md:min-h-[280px] flex items-center px-8 md:px-14 py-10">
@@ -133,19 +75,16 @@ export default function Testimonials() {
                   className="w-full"
                 >
                   <div className="max-w-3xl">
-                    {/* Stars */}
                     <div className="flex gap-1 mb-6">
                       {Array.from({ length: currentTestimonial.rating }).map((_, i) => (
                         <Star key={i} className="w-5 h-5 fill-accent text-accent" />
                       ))}
                     </div>
 
-                    {/* Quote */}
                     <blockquote className="text-2xl md:text-[27px] leading-tight tracking-tight text-white mb-10">
-                      „{currentTestimonial.quote}”
+                      „{currentTestimonial.quote}"
                     </blockquote>
 
-                    {/* Author */}
                     <div>
                       <div className="font-semibold text-lg text-white">
                         {currentTestimonial.name}
@@ -163,9 +102,7 @@ export default function Testimonials() {
             </div>
           </div>
 
-          {/* Controls */}
           <div className="flex items-center justify-between mt-6 px-2">
-            {/* Dots */}
             <div className="flex gap-2">
               {testimonials.map((_, index) => (
                 <button
@@ -178,7 +115,6 @@ export default function Testimonials() {
               ))}
             </div>
 
-            {/* Arrows */}
             <div className="flex gap-2">
               <button
                 type="button"
@@ -198,6 +134,18 @@ export default function Testimonials() {
               </button>
             </div>
           </div>
+        </div>
+
+        <div className="mt-10 text-center">
+          <a
+            href={siteConfig.googleBusiness.reviewUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent-light transition-colors"
+          >
+            Lasă o recenzie pe Google
+            <ExternalLink className="w-4 h-4" aria-hidden="true" />
+          </a>
         </div>
       </div>
     </section>

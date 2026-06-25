@@ -2,9 +2,16 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, MapPin } from "lucide-react";
-import { projects, type Project, type Category } from "@/lib/portfolio";
+import {
+  projects,
+  categoryToServiceSlug,
+  getProjectAlt,
+  type Project,
+  type Category,
+} from "@/lib/portfolio";
 import SectionTitle from "@/components/ui/SectionTitle";
 
 const categories: ("Toate" | Category)[] = [
@@ -105,13 +112,12 @@ export default function Portfolio() {
               >
                 <Image
                   src={project.image}
-                  alt=""
+                  alt={getProjectAlt(project)}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   quality={70}
                   loading="lazy"
                   className="object-cover transition-all duration-700 group-hover:scale-[1.08]"
-                  aria-hidden="true"
                 />
 
                 {/* Gradient overlay */}
@@ -203,7 +209,7 @@ export default function Portfolio() {
                   <Image
                     key={selectedProject.id}
                     src={selectedProject.image}
-                    alt={`${selectedProject.title} — ${selectedProject.category} ${selectedProject.location}`}
+                    alt={getProjectAlt(selectedProject)}
                     fill
                     sizes="(max-width: 768px) 100vw, 1152px"
                     className="object-cover"
@@ -254,11 +260,17 @@ export default function Portfolio() {
                     {selectedProject.description}
                   </p>
                   {selectedProject.client && (
-                    <div className="text-sm">
+                    <div className="text-sm mb-4">
                       <span className="text-white/50">Client: </span>
                       <span className="text-white">{selectedProject.client}</span>
                     </div>
                   )}
+                  <Link
+                    href={`/servicii/${categoryToServiceSlug[selectedProject.category]}`}
+                    className="inline-flex text-sm text-accent hover:text-accent-light transition-colors"
+                  >
+                    Vezi serviciul {selectedProject.category} →
+                  </Link>
                 </div>
               </div>
 

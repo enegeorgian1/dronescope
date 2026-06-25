@@ -46,13 +46,18 @@ export default function Hero() {
           FILMĂRI CU DRONĂ • CONSTANȚA & LITORAL • PESTE 10 ANI
         </div>
 
-        <h1 className="text-6xl md:text-[72px] lg:text-[84px] font-bold tracking-[-3.5px] leading-[1.05] mb-6 text-white">
-          VIZIUNE DE LA<br />ÎNĂLȚIME.
+        <h1 className="mb-6 text-white">
+          <span className="block text-base md:text-lg font-medium tracking-wide text-white/85 mb-5">
+            Filmări cu dronă și fotografii aeriene în Constanța
+          </span>
+          <span className="block text-6xl md:text-[72px] lg:text-[84px] font-bold tracking-[-3.5px] leading-[1.05]">
+            VIZIUNE DE LA<br />ÎNĂLȚIME.
+          </span>
         </h1>
 
-        <p className="max-w-2xl mx-auto text-2xl md:text-[26px] text-white/90 tracking-tight mb-12">
-          Filmări cu dronă și fotografii aeriene în Constanța, Mamaia și pe tot litoralul.<br className="hidden md:block" />
-          Conținut cinematic pentru imobiliare, nunți, evenimente și branduri.
+        <p className="max-w-2xl mx-auto text-xl md:text-2xl text-white/90 tracking-tight mb-12">
+          Mamaia, Năvodari, Eforie și tot litoralul — cinematic, termal, randare 3D și FPV 360°
+          pentru imobiliare, nunți, evenimente și proiecte industriale.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

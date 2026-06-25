@@ -1,6 +1,8 @@
 import Link from "next/link";
 import DroneLogo from "@/components/ui/DroneLogo";
+import { landingPages } from "@/lib/landing-pages";
 import { servicePages } from "@/lib/services";
+import { siteConfig } from "@/lib/seo";
 
 const footerLinks = {
   companie: [
@@ -27,7 +29,7 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 text-sm">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
           <div>
             <div className="font-semibold mb-3">Companie</div>
             <div className="space-y-2 text-text-secondary">
@@ -57,11 +59,33 @@ export default function Footer() {
             </div>
           </div>
           <div>
+            <div className="font-semibold mb-3">Zone</div>
+            <div className="space-y-2 text-text-secondary">
+              {landingPages.map((page) => (
+                <Link
+                  key={page.slug}
+                  href={page.path}
+                  className="block underline-offset-2 hover:text-accent-light hover:underline transition-colors"
+                >
+                  {page.title}
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div>
             <div className="font-semibold mb-3">Contact</div>
             <div className="space-y-2 text-text-secondary">
               <a href="tel:+40729626932" className="block underline-offset-2 hover:text-accent-light hover:underline transition-colors">0729 626 932</a>
               <a href="https://wa.me/40729626932" target="_blank" rel="noopener noreferrer" className="block underline-offset-2 hover:text-accent-light hover:underline transition-colors">WhatsApp</a>
               <a href="mailto:contact@dronescope.ro" className="block underline-offset-2 hover:text-accent-light hover:underline transition-colors">contact@dronescope.ro</a>
+              <a
+                href={siteConfig.googleBusiness.reviewUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block underline-offset-2 hover:text-accent-light hover:underline transition-colors"
+              >
+                Recenzie Google
+              </a>
             </div>
             <div className="font-semibold mb-3 mt-6">Locație</div>
             <div className="text-text-secondary">

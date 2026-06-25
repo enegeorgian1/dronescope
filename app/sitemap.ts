@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/seo";
 import { getAllArticleSlugs, getArticleUrl } from "@/lib/blog";
+import { landingPages } from "@/lib/landing-pages";
 import { getAllServiceSlugs, getServiceUrl } from "@/lib/services";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -18,6 +19,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.7,
+  }));
+
+  const landingEntries = landingPages.map((page) => ({
+    url: `${siteConfig.url}${page.path}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
   }));
 
   return [
@@ -39,6 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.8,
     },
+    ...landingEntries,
     ...serviceEntries,
     ...blogEntries,
   ];

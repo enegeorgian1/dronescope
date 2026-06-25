@@ -1,8 +1,18 @@
 import { siteConfig } from "@/lib/seo";
 import { faqs } from "@/lib/faq";
 import { servicePages, getServiceUrl } from "@/lib/services";
+import { getAggregateRating, testimonials } from "@/lib/testimonials";
 
 export default function StructuredData() {
+  const { ratingValue, reviewCount, bestRating } = getAggregateRating();
+
+  const sameAs = [
+    siteConfig.social.whatsapp,
+    siteConfig.googleBusiness.mapsUrl,
+    siteConfig.social.instagram,
+    siteConfig.social.facebook,
+  ].filter(Boolean);
+
   const localBusiness = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
@@ -36,6 +46,24 @@ export default function StructuredData() {
       latitude: siteConfig.geo.latitude,
       longitude: siteConfig.geo.longitude,
     },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue,
+      reviewCount,
+      bestRating,
+      worstRating: 1,
+    },
+    review: testimonials.map((t) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: t.name },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: t.rating,
+        bestRating,
+      },
+      reviewBody: t.quote,
+      publisher: { "@type": "Organization", name: t.company },
+    })),
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Servicii filmări aeriene",
@@ -52,7 +80,7 @@ export default function StructuredData() {
         },
       })),
     },
-    sameAs: [siteConfig.social.whatsapp],
+    sameAs,
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",

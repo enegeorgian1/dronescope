@@ -7,9 +7,28 @@ export interface Project {
   location: string;
   description: string;
   image: string;
-  videoUrl?: string;   // dacă există, itemul este video
+  videoUrl?: string;
   client?: string;
   year?: string;
+}
+
+export const categoryToServiceSlug: Record<Category, string> = {
+  Imobiliare: "filmari-imobiliare",
+  Nunți: "nunti-evenimente",
+  Evenimente: "nunti-evenimente",
+  Industrial: "industrial-constructii",
+  Reclame: "marketing-aerial",
+};
+
+export function getProjectAlt(project: Project): string {
+  const type = project.videoUrl ? "Videoclip dronă" : "Filmare dronă";
+  return `${type} ${project.category.toLowerCase()} — ${project.title}, ${project.location} — Drone Scope`;
+}
+
+export function getProjectsByIds(ids: number[]): Project[] {
+  return ids
+    .map((id) => projects.find((p) => p.id === id))
+    .filter((p): p is Project => p !== undefined);
 }
 
 export const projects: Project[] = [

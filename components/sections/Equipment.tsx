@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/ui/SectionTitle";
 import {
@@ -9,6 +10,7 @@ import {
   supportEquipment,
 } from "@/lib/equipment";
 import {
+  ArrowRight,
   Camera,
   Video,
   Thermometer,
@@ -82,6 +84,16 @@ export default function Equipment() {
                         </span>
                       ))}
                     </div>
+
+                    {isMatrice && (
+                      <Link
+                        href="/servicii/matrice-4t-termal-3d"
+                        className="inline-flex items-center gap-1 mt-5 text-accent text-sm font-medium hover:text-accent-light transition-colors"
+                      >
+                        Vezi toate serviciile Matrice 4T
+                        <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                      </Link>
+                    )}
                   </div>
 
                   <div className="lg:w-3/5 mt-6 lg:mt-0">

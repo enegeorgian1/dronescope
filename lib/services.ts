@@ -1,25 +1,9 @@
 import { siteConfig } from "@/lib/seo";
 
-export interface ServiceFAQ {
-  question: string;
-  answer: string;
-}
+import { matrice4tService } from "@/lib/services/matrice-4t-termal-3d";
+import type { ServicePage } from "@/lib/services/types";
 
-export interface ServicePage {
-  slug: string;
-  cardTitle: string;
-  title: string;
-  metaTitle: string;
-  metaDescription: string;
-  keywords: string[];
-  eyebrow: string;
-  intro: string[];
-  benefits: { title: string; desc: string }[];
-  includes: string[];
-  useCases: string[];
-  faqs: ServiceFAQ[];
-  relatedSlugs: string[];
-}
+export type { ServiceCategory, ServiceFAQ, ServicePage } from "@/lib/services/types";
 
 export const servicePages: ServicePage[] = [
   {
@@ -258,7 +242,7 @@ export const servicePages: ServicePage[] = [
     eyebrow: "INDUSTRIAL • TERMAL • RANDARE 3D",
     intro: [
       "Proiectele industriale și de construcții cer mai mult decât video frumos — cer date precise. Cu DJI Matrice 4T oferim imagistică termică, fotogrammetrie, modele 3D, hărți ortofoto și inspecții la distanță sigură. Eliminăm riscurile echipelor la înălțime și livrăm materiale pentru BIM, rapoarte investitori și autorități.",
-      "Operăm în Portul Constanța, parcuri industriale, șantiere, parcuri eoliene și infrastructură critică. Programe unice sau recurente (săptămânal/lunar) cu time-lapse și comparare termică în timp.",
+      "Operăm în Portul Constanța, parcuri industriale, șantiere, parcuri eoliene și infrastructură critică. Pentru detalii complete despre randare 3D, scanări termice, topografie și inspecții industriale, vezi pagina dedicată Matrice 4T.",
     ],
     benefits: [
       {
@@ -313,11 +297,12 @@ export const servicePages: ServicePage[] = [
       {
         question: "Oferiți inspecții termale și randare 3D?",
         answer:
-          "Da. Cu DJI Matrice 4T realizăm captură termică, fotogrammetrie, modele 3D, ortofoto și măsurători de volum. Ideal pentru șantiere, industrial și energetic.",
+          "Da. Cu DJI Matrice 4T realizăm captură termică, fotogrammetrie, modele 3D, ortofoto și măsurători de volum. Toate capabilitățile sunt detaliate pe pagina dedicată Servicii Matrice 4T — termal, randare 3D, topografie și inspecții industriale.",
       },
     ],
-    relatedSlugs: ["videoclipuri-corporate", "filmari-imobiliare"],
+    relatedSlugs: ["matrice-4t-termal-3d", "videoclipuri-corporate"],
   },
+  matrice4tService,
   {
     slug: "videoclipuri-corporate",
     cardTitle: "Videoclipuri Corporate",

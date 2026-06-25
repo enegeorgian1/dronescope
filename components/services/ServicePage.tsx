@@ -75,7 +75,47 @@ export default function ServicePage({ service }: ServicePageProps) {
         </div>
       </section>
 
-      <section className="section bg-surface border-t border-white/10">
+      {service.categories && service.categories.length > 0 && (
+        <section className="section bg-surface border-t border-white/10">
+          <div className="max-w-6xl mx-auto px-6">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+              Servicii Matrice 4T
+            </h2>
+            <p className="text-text-secondary max-w-3xl mb-10 text-[15px]">
+              Platforma enterprise pentru proiecte tehnice — de la randare 3D și topografie
+              la scanări termice și inspecții industriale.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              {service.categories.map((category, i) => (
+                <div key={i} className="card">
+                  <h3 className="text-xl font-semibold mb-3">{category.title}</h3>
+                  <p className="text-text-secondary leading-relaxed text-[15px] mb-5">
+                    {category.desc}
+                  </p>
+                  <p className="text-sm font-medium text-text mb-3">Ce livrăm</p>
+                  <ul className="space-y-2">
+                    {category.deliverables.map((item, j) => (
+                      <li
+                        key={j}
+                        className="flex items-start gap-3 text-text-secondary text-[13px]"
+                      >
+                        <Check className="w-4 h-4 text-accent shrink-0 mt-0.5" aria-hidden="true" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <section
+        className={`section border-t border-white/10 ${
+          service.categories?.length ? "bg-bg" : "bg-surface"
+        }`}
+      >
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-10">
             De ce să alegi Drone Scope

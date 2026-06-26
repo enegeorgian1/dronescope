@@ -1,3 +1,11 @@
 {
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "dronescope.ro" }],
+      "destination": "https://www.dronescope.ro/:path*",
+      "permanent": true
+    }
+  ]
 }

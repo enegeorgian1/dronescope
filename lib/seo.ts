@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Drone Scope",
-  url: "https://dronescope.ro",
+  url: "https://www.dronescope.ro",
   locale: "ro_RO",
   language: "ro",
   title: "Filmări cu Dronă Constanța | Fotografii Aeriene | Drone Scope",

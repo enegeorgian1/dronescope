@@ -93,7 +93,7 @@ export const filmariDronaMamaia: LandingPage = {
     {
       question: "Care este prețul pentru o vilă în Mamaia Nord?",
       answer:
-        "O sesiune standard pentru o vilă sau apartament începe de la 450–650 lei, în funcție de complexitate și numărul de unghiuri. Pentru ansambluri rezidențiale sau proiecte cu mai multe clădiri, oferim pachete personalizate.",
+        "O sesiune standard pentru o vilă sau apartament începe de la 500 lei, în funcție de complexitate și numărul de unghiuri. Pentru ansambluri rezidențiale sau proiecte cu mai multe clădiri, oferim pachete personalizate.",
     },
     {
       question: "Filmați și la apus pe plajă?",

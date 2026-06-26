@@ -5,7 +5,7 @@ export const fotografiiImobiliareArticol: BlogArticle = {
   title: "Fotografii aeriene imobiliare în Constanța: de ce vinzi mai repede",
   metaTitle: "Fotografii Aeriene Imobiliare Constanța 2026 • ROI | Drone Scope",
   metaDescription:
-    "Fotografii aeriene imobiliare cresc vizualizările cu 300%+ și vânzările mai rapide. Ghid pentru agenți și proprietari din Constanța. De la 450 lei. Ofertă gratuită!",
+    "Fotografii aeriene imobiliare cresc vizualizările cu 300%+ și vânzările mai rapide. Ghid pentru agenți și proprietari din Constanța. De la 500 lei. Ofertă gratuită!",
   keywords: [
     "fotografii aeriene imobiliare Constanța",
     "filmări imobiliare dronă",
@@ -22,7 +22,7 @@ export const fotografiiImobiliareArticol: BlogArticle = {
       { type: "text", content: "Da — anunțurile cu conținut aerian primesc de 3–5 ori mai multe vizualizări, petrecere mai mult timp pe pagină și generează cu până la 40% mai multe solicitări de vizionare. Pe litoral, unde contextul (mare, plajă, acces) e decisiv, diferența e și mai mare." },
     ],
     [
-      { type: "text", content: "La Drone Scope, după sute de sesiuni pentru agenții și proprietari din Constanța și Mamaia, știm exact ce funcționează pe Imobiliare.ro, Storia și în campaniile social media. Acest ghid îți arată de ce merită investiția de 450–650 lei — și cum o amortizezi la prima tranzacție." },
+      { type: "text", content: "La Drone Scope, după sute de sesiuni pentru agenții și proprietari din Constanța și Mamaia, știm exact ce funcționează pe Imobiliare.ro, Storia și în campaniile social media. Acest ghid îți arată de ce merită investiția de la 500 lei — și cum o amortizezi la prima tranzacție." },
       { type: "link", content: " Solicită o sesiune", href: "/servicii/filmari-imobiliare" },
       { type: "text", content: " sau citește argumentele complete." },
     ],
@@ -120,7 +120,7 @@ export const fotografiiImobiliareArticol: BlogArticle = {
         [
           { type: "text", content: "O sesiune de " },
           { type: "link", content: "filmări imobiliare cu dronă", href: "/servicii/filmari-imobiliare" },
-          { type: "text", content: " costă 450–650 lei. Dacă proprietatea se vinde cu 2 săptămâni mai repede sau la un preț cu 2–3% mai bun, ROI-ul e de zeci sau sute de procente." },
+          { type: "text", content: " începe de la 500 lei. Dacă proprietatea se vinde cu 2 săptămâni mai repede sau la un preț cu 2–3% mai bun, ROI-ul e de zeci sau sute de procente." },
         ],
       ],
       table: {
@@ -204,7 +204,7 @@ export const fotografiiImobiliareArticol: BlogArticle = {
           { type: "text", content: "Pentru proprietăți sub 50.000€ în zone fără context special, poate fi opțional. Pentru litoral, vile, terenuri și listări premium — fotografiile aeriene sunt standardul competitiv, nu un extra. Agențiile care le folosesc constant câștigă listări mai valoroase și își construiesc brand de calitate." },
         ],
         [
-          { type: "link", content: "Solicită o sesiune de la 450 lei", href: "/#contact" },
+          { type: "link", content: "Solicită o sesiune de la 500 lei", href: "/#contact" },
           { type: "text", content: " — răspundem în 2 ore cu ofertă pentru proprietatea ta din Constanța sau Mamaia." },
         ],
       ],
@@ -214,7 +214,7 @@ export const fotografiiImobiliareArticol: BlogArticle = {
     {
       question: "Cât costă fotografii aeriene pentru un apartament în Constanța?",
       answer:
-        "O sesiune standard costă 450–650 lei și include fotografii aeriene, clip video 4K de 60–90 secunde, autorizații CAA și 2 runde de revizii. Livrare în 3–5 zile lucrătoare.",
+        "O sesiune standard începe de la 500 lei și include fotografii aeriene, clip video 4K de 60–90 secunde, autorizații CAA și 2 runde de revizii. Livrare în 3–5 zile lucrătoare.",
     },
     {
       question: "Pot folosi pozele pe Imobiliare.ro și Storia?",

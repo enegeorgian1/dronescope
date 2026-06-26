@@ -93,7 +93,7 @@ export const filmariDronaOvidiu: LandingPage = {
     {
       question: "Cât costă o filmare imobiliară în Ovidiu?",
       answer:
-        "O sesiune standard începe de la 450–650 lei. Pentru ansambluri cu mai multe clădiri sau monitorizare de șantier, trimitem ofertă personalizată în 2 ore.",
+        "O sesiune standard începe de la 500 lei. Pentru ansambluri cu mai multe clădiri sau monitorizare de șantier, trimitem ofertă personalizată în 2 ore.",
     },
     {
       question: "Puteți filma evenimente pe lac?",

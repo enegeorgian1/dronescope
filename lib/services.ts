@@ -63,7 +63,7 @@ export const servicePages: ServicePage[] = [
       {
         question: "Cât costă o filmare imobiliară cu dronă în Constanța?",
         answer:
-          "O sesiune standard pentru o proprietate (apartament, vilă sau teren) începe de la 450–650 lei, în funcție de locație, complexitate și numărul de unghiuri. Pentru ansambluri rezidențiale sau proiecte cu mai multe clădiri, oferim pachete personalizate.",
+          "O sesiune standard pentru o proprietate (apartament, vilă sau teren) începe de la 500 lei, în funcție de locație, complexitate și numărul de unghiuri. Pentru ansambluri rezidențiale sau proiecte cu mai multe clădiri, oferim pachete personalizate.",
       },
       {
         question: "Cât durează o sesiune pe locație?",

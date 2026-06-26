@@ -93,7 +93,7 @@ export const filmariDronaMangalia: LandingPage = {
     {
       question: "Cât costă o filmare cu dronă în Mangalia?",
       answer:
-        "Sesiuni imobiliare standard: 450–650 lei. Evenimente, hoteluri sau campanii multi-format au pachete personalizate — contactează-ne pentru ofertă exactă.",
+        "Sesiuni imobiliare standard: de la 500 lei. Evenimente, hoteluri sau campanii multi-format au pachete personalizate — contactează-ne pentru ofertă exactă.",
     },
     {
       question: "Puteți filma hoteluri și pensiuni?",

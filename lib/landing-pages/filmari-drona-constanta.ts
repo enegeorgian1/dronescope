@@ -61,7 +61,7 @@ export const filmariDronaConstanta: LandingPage = {
     },
     {
       title: "Prețuri transparente",
-      desc: "Sesiuni imobiliare de la 450–650 lei. Pachete pentru șantiere, evenimente și industrial la cerere.",
+      desc: "Sesiuni imobiliare de la 500 lei. Pachete pentru șantiere, evenimente și industrial la cerere.",
     },
   ],
   localAreas: [
@@ -89,7 +89,7 @@ export const filmariDronaConstanta: LandingPage = {
     {
       question: "Cât costă o filmare cu dronă în Constanța?",
       answer:
-        "O sesiune imobiliară standard (vilă, apartament sau teren) începe de la 450–650 lei. Nunți, industrial, termal sau randare 3D au pachete personalizate — contactează-ne pentru ofertă exactă în funcție de locație și complexitate.",
+        "O sesiune imobiliară standard (vilă, apartament sau teren) începe de la 500 lei. Nunți, industrial, termal sau randare 3D au pachete personalizate — contactează-ne pentru ofertă exactă în funcție de locație și complexitate.",
     },
     {
       question: "Aveți nevoie de autorizații speciale în Constanța?",

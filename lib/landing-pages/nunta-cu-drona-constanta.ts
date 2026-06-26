@@ -84,7 +84,7 @@ export const nuntaCuDronaConstanta: LandingPage = {
     {
       question: "Cât costă o nuntă cu dronă în Constanța?",
       answer:
-        "Pachetele pentru nunți încep de la 800–1.200 lei, în funcție de durata evenimentului, numărul de locații și complexitatea montajului. Trimitem ofertă personalizată în 2 ore.",
+        "Pachetele pentru nunți încep de la 1.200 lei, în funcție de durata evenimentului, numărul de locații și complexitatea montajului. Trimitem ofertă personalizată în 2 ore.",
     },
     {
       question: "Puteți filma o ceremonie pe plajă în Mamaia?",

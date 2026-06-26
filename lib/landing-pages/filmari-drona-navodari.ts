@@ -61,7 +61,7 @@ export const filmariDronaNavodari: LandingPage = {
     },
     {
       title: "Prețuri transparente",
-      desc: "Sesiuni imobiliare de la 450–650 lei. Pachete pentru dezvoltatori cu mai multe unități la cerere.",
+      desc: "Sesiuni imobiliare de la 500 lei. Pachete pentru dezvoltatori cu mai multe unități la cerere.",
     },
   ],
   localAreas: [
@@ -93,7 +93,7 @@ export const filmariDronaNavodari: LandingPage = {
     {
       question: "Cât costă o filmare imobiliară în Năvodari?",
       answer:
-        "O sesiune standard pentru vilă, apartament sau teren începe de la 450–650 lei. Pentru ansambluri cu mai multe clădiri sau faze de construcție, trimitem ofertă personalizată în 2 ore.",
+        "O sesiune standard pentru vilă, apartament sau teren începe de la 500 lei. Pentru ansambluri cu mai multe clădiri sau faze de construcție, trimitem ofertă personalizată în 2 ore.",
     },
     {
       question: "Puteți filma și în Mamaia Nord din Năvodari?",

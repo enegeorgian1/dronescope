@@ -5,7 +5,7 @@ export const catCostaFilmareArticol: BlogArticle = {
   title: "Cât costă o filmare cu dronă în Constanța în 2026?",
   metaTitle: "Cât Costă Filmare cu Dronă Constanța 2026 • Ghid Prețuri | Drone Scope",
   metaDescription:
-    "Cât costă o filmare cu dronă în Constanța în 2026? Prețuri de la 450 lei pentru imobiliare, 1.200 lei pentru nunți. Ghid complet + tabel comparativ. Solicită ofertă gratuită!",
+    "Cât costă o filmare cu dronă în Constanța în 2026? Prețuri de la 500 lei pentru imobiliare, 1.200 lei pentru nunți. Ghid complet + tabel comparativ. Solicită ofertă gratuită!",
   keywords: [
     "cât costă filmare cu dronă",
     "preț filmare dronă Constanța 2026",
@@ -19,7 +19,7 @@ export const catCostaFilmareArticol: BlogArticle = {
   intro: [
     [
       { type: "text", content: "Cât costă o filmare cu dronă în Constanța în 2026? " },
-      { type: "text", content: "Răspunsul direct: o sesiune standard pornește de la 450–650 lei pentru imobiliare, 1.200–2.000 lei pentru nunți pe litoral și 1.500–3.500 lei pentru spoturi de marketing aerial. Prețul final depinde de locație, durată, montaj și autorizații CAA." },
+      { type: "text", content: "Răspunsul direct: o sesiune standard pornește de la 500 lei pentru imobiliare, 1.200–2.000 lei pentru nunți pe litoral și 1.500–3.500 lei pentru spoturi de marketing aerial. Prețul final depinde de locație, durată, montaj și autorizații CAA." },
     ],
     [
       { type: "text", content: "La Drone Scope, după peste 450 de proiecte în Constanța, Mamaia și Năvodari, știm exact ce influențează costul — și ce primești în schimb. În acest ghid găsești tabele de prețuri actualizate, comparații între pachete și sfaturi practice ca să nu plătești mai mult decât trebuie." },
@@ -59,7 +59,7 @@ export const catCostaFilmareArticol: BlogArticle = {
         caption: "Prețuri orientative filmări cu dronă Constanța 2026",
         headers: ["Tip proiect", "Preț orientativ", "Durată tipică", "Ce primești"],
         rows: [
-          ["Filmări imobiliare (apartament/vilă)", "450–650 lei", "1–2 ore", "Foto aeriene + clip 4K 60–90 sec"],
+          ["Filmări imobiliare (apartament/vilă)", "500–700 lei", "1–2 ore", "Foto aeriene + clip 4K 60–90 sec"],
           ["Ansamblu rezidențial / multiple clădiri", "800–1.500 lei", "2–4 ore", "Foto + video + mai multe unghiuri"],
           ["Nuntă / eveniment pe litoral", "1.200–2.000 lei", "Half-day", "Filmare + montaj cinematic 2–5 min"],
           ["Marketing aerial / spot publicitar", "1.500–3.500 lei", "1 zi", "4K + montaj + export multi-format"],
@@ -136,7 +136,7 @@ export const catCostaFilmareArticol: BlogArticle = {
         caption: "Comparație pachete filmări cu dronă Drone Scope",
         headers: ["Caracteristică", "Basic", "Premium", "Corporate"],
         rows: [
-          ["Preț orientativ", "450–650 lei", "1.200–2.000 lei", "2.500–5.000+ lei"],
+          ["Preț orientativ", "500–700 lei", "1.200–2.000 lei", "2.500–5.000+ lei"],
           ["Tip proiect", "Imobiliare", "Nunți / evenimente", "Spot / corporate"],
           ["Foto aeriene", "Da", "Da", "Da"],
           ["Video 4K montat", "60–90 sec", "2–5 min cinematic", "Spot complet multi-format"],
@@ -156,7 +156,7 @@ export const catCostaFilmareArticol: BlogArticle = {
           { type: "text", content: ", asigurare de răspundere civilă de 2 milioane euro, filmare cu echipament profesional, și drepturi de utilizare comercială complete asupra materialelor livrate." },
         ],
         [
-          { type: "text", content: "Am filmat pentru agenții imobiliare din Constanța, dezvoltatori din Mamaia Nord, hoteluri de pe litoral și branduri naționale. La un proiect recent pentru o vilă în Năvodari, combinația foto aeriană + clip 90 secunde a generat cu 40% mai multe solicitări de vizionare în prima săptămână pe Imobiliare.ro — investiția de 550 lei s-a amortizat instant." },
+          { type: "text", content: "Am filmat pentru agenții imobiliare din Constanța, dezvoltatori din Mamaia Nord, hoteluri de pe litoral și branduri naționale. La un proiect recent pentru o vilă în Năvodari, combinația foto aeriană + clip 90 secunde a generat cu 40% mai multe solicitări de vizionare în prima săptămână pe Imobiliare.ro — investiția de 500 lei s-a amortizat instant." },
         ],
         [
           { type: "text", content: "Nu includem (decât la cerere explicită): deplasări în afara județului Constanța, filmări la sol cu cameră separată, voice-over profesional, subtitrări în limbi străine, sau licențe muzicale premium pentru TV național." },
@@ -183,7 +183,7 @@ export const catCostaFilmareArticol: BlogArticle = {
           heading: "Proprietari și agenții imobiliare",
           paragraphs: [
             [
-              { type: "text", content: "Cel mai accesibil segment. O sesiune pentru un apartament sau o vilă în Constanța, Mamaia sau Eforie: 450–650 lei. Pentru dezvoltatori cu ansambluri rezidențiale, oferim pachete lunare cu preț per unitate redus. Detalii complete pe pagina de " },
+              { type: "text", content: "Cel mai accesibil segment. O sesiune pentru un apartament sau o vilă în Constanța, Mamaia sau Eforie: de la 500 lei. Pentru dezvoltatori cu ansambluri rezidențiale, oferim pachete lunare cu preț per unitate redus. Detalii complete pe pagina de " },
               { type: "link", content: "filmări imobiliare cu dronă", href: "/servicii/filmari-imobiliare" },
               { type: "text", content: "." },
             ],
@@ -251,7 +251,7 @@ export const catCostaFilmareArticol: BlogArticle = {
       heading: "Concluzie: merită investiția?",
       paragraphs: [
         [
-          { type: "text", content: "Da — dacă alegi un operator autorizat care livrează materiale gata de folosit, nu doar fișiere brute. Diferența dintre o filmare de 300 lei cu un amator fără autorizație și una de 550 lei cu echipă profesională o vezi în conversii, siguranță legală și calitatea percepută a brandului tău." },
+          { type: "text", content: "Da — dacă alegi un operator autorizat care livrează materiale gata de folosit, nu doar fișiere brute. Diferența dintre o filmare de 300 lei cu un amator fără autorizație și una de 500 lei cu echipă profesională o vezi în conversii, siguranță legală și calitatea percepută a brandului tău." },
         ],
         [
           { type: "text", content: "Pentru o ofertă personalizată în Constanța, Mamaia sau pe orice altă zonă din România: " },
@@ -265,7 +265,7 @@ export const catCostaFilmareArticol: BlogArticle = {
     {
       question: "Cât costă o filmare cu dronă pentru un apartament în Constanța?",
       answer:
-        "O sesiune standard pentru un apartament sau o vilă în Constanța costă între 450 și 650 lei, în funcție de locație, numărul de unghiuri și complexitatea montajului. Include fotografii aeriene, un clip video 4K de 60–90 secunde, autorizații CAA și 2 runde de revizii.",
+        "O sesiune standard pentru un apartament sau o vilă în Constanța începe de la 500 lei, în funcție de locație, numărul de unghiuri și complexitatea montajului. Include fotografii aeriene, un clip video 4K de 60–90 secunde, autorizații CAA și 2 runde de revizii.",
     },
     {
       question: "Cât costă filmarea cu dronă la o nuntă în Mamaia?",

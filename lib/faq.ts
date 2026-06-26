@@ -7,7 +7,7 @@ export const faqs: FAQItem[] = [
   {
     question: "Cât costă o filmare sau o ședință foto cu dronă?",
     answer:
-      "Prețurile pentru filmări cu dronă variază în funcție de tipul proiectului, durata, locație și complexitate. O ședință standard de fotografii aeriene pentru imobiliare în Constanța sau Mamaia începe de la 450-650 lei, iar proiecte mai ample (nunți, reclame, industrii) au prețuri personalizate. Oferim întotdeauna o ofertă clară după o scurtă discuție.",
+      "Prețurile pentru filmări cu dronă variază în funcție de tipul proiectului, durata, locație și complexitate. O ședință standard de fotografii aeriene pentru imobiliare în Constanța sau Mamaia începe de la 500 lei, iar proiecte mai ample (nunți, reclame, industrii) au prețuri personalizate. Oferim întotdeauna o ofertă clară după o scurtă discuție.",
   },
   {
     question: "Cât durează o filmare cu dronă?",

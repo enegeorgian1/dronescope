@@ -218,7 +218,7 @@ export const autorizatiiDronaArticol: BlogArticle = {
       ],
       paragraphs: [
         [
-          { type: "text", content: "Prețul corect pentru o filmare legală în Constanța începe de la 450 lei imobiliare — " },
+          { type: "text", content: "Prețul corect pentru o filmare legală în Constanța începe de la 500 lei imobiliare — " },
           { type: "link", content: "vezi ghidul de prețuri", href: "/blog/cat-costa-filmare-cu-drona-constanta" },
           { type: "text", content: ". Dacă cineva oferă 150 lei, întreabă unde sunt autorizațiile." },
         ],

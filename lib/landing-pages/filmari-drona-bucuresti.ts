@@ -94,7 +94,7 @@ export const filmariDronaBucuresti: LandingPage = {
     {
       question: "Cât costă o filmare cu dronă în București?",
       answer:
-        "Depinde de tipul proiectului: imobiliare de la 450–650 lei (+ deplasare), corporate și marketing au pachete personalizate. Trimitem ofertă exactă în 2 ore.",
+        "Depinde de tipul proiectului: imobiliare de la 500 lei (+ deplasare), corporate și marketing au pachete personalizate. Trimitem ofertă exactă în 2 ore.",
     },
     {
       question: "Puteți filma în zone centrale sau lângă aeroport?",

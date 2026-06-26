@@ -42,7 +42,7 @@ export const filmariImobiliareMamaia: LandingPage = {
       title: "Ce primești și în cât timp",
       paragraphs: [
         "Fotografii RAW + JPEG optimizat web, clip video 30–90 secunde montat cinematic, drepturi comerciale complete. Formate pentru portaluri imobiliare, social media (16:9, 9:16) și print la cerere.",
-        "Termen standard de livrare: 3–5 zile lucrătoare. Prețuri de la 450–650 lei pentru sesiuni standard — pachete pentru agenții cu volume multiple.",
+        "Termen standard de livrare: 3–5 zile lucrătoare. Prețuri de la 500 lei pentru sesiuni standard — pachete pentru agenții cu volume multiple.",
       ],
     },
   ],
@@ -84,7 +84,7 @@ export const filmariImobiliareMamaia: LandingPage = {
     {
       question: "Cât costă filmări imobiliare cu dronă în Mamaia?",
       answer:
-        "O sesiune standard pentru vilă, apartament sau teren începe de la 450–650 lei. Pentru ansambluri rezidențiale sau proiecte cu mai multe clădiri, oferim pachete personalizate.",
+        "O sesiune standard pentru vilă, apartament sau teren începe de la 500 lei. Pentru ansambluri rezidențiale sau proiecte cu mai multe clădiri, oferim pachete personalizate.",
     },
     {
       question: "Cât de repede primesc materialele?",

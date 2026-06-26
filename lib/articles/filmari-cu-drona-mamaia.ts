@@ -5,7 +5,7 @@ export const filmariMamaiaArticol: BlogArticle = {
   title: "Filmări cu dronă în Mamaia 2026: locații, prețuri și sfaturi",
   metaTitle: "Filmări cu Dronă Mamaia 2026 • Locații & Prețuri | Drone Scope",
   metaDescription:
-    "Ghid complet filmări cu dronă în Mamaia și Mamaia Nord 2026. Locații, prețuri de la 450 lei, restricții CAA, sfaturi golden hour. 450+ proiecte. Ofertă gratuită!",
+    "Ghid complet filmări cu dronă în Mamaia și Mamaia Nord 2026. Locații, prețuri de la 500 lei, restricții CAA, sfaturi golden hour. 450+ proiecte. Ofertă gratuită!",
   keywords: [
     "filmări dronă Mamaia 2026",
     "filmări cu dronă Mamaia Nord",
@@ -19,7 +19,7 @@ export const filmariMamaiaArticol: BlogArticle = {
   intro: [
     [
       { type: "text", content: "Cât costă o filmare cu dronă în Mamaia în 2026? " },
-      { type: "text", content: "Prețurile sunt similare cu Constanța: 450–650 lei pentru imobiliare, 1.200–2.000 lei pentru nunți și evenimente, 1.500–3.500 lei pentru marketing aerial. Mamaia oferă un decor unic — plajă, lagună, hoteluri — care justifică investiția în conținut aerian de calitate." },
+      { type: "text", content: "Prețurile sunt similare cu Constanța: de la 500 lei pentru imobiliare, 1.200–2.000 lei pentru nunți și evenimente, 1.500–3.500 lei pentru marketing aerial. Mamaia oferă un decor unic — plajă, lagună, hoteluri — care justifică investiția în conținut aerian de calitate." },
     ],
     [
       { type: "text", content: "Am filmat în Mamaia de peste un deceniu: de la vile din Mamaia Nord la hoteluri de pe promenadă și evenimente pe plajă. În acest ghid găsești locațiile noastre preferate, restricțiile de zbor, prețuri actualizate și sfaturi practice pentru rezultate cinematografice." },
@@ -82,7 +82,7 @@ export const filmariMamaiaArticol: BlogArticle = {
         caption: "Prețuri orientative filmări dronă Mamaia 2026",
         headers: ["Serviciu", "Preț", "Durată", "Ideal pentru"],
         rows: [
-          ["Imobiliare (vilă/apartament)", "450–650 lei", "1–2h", "Agenții, proprietari, dezvoltatori"],
+          ["Imobiliare (vilă/apartament)", "500–700 lei", "1–2h", "Agenții, proprietari, dezvoltatori"],
           ["Hotel / restaurant / beach", "1.500–2.500 lei", "Half-day", "Marketing HoReCa, turism"],
           ["Nuntă / eveniment pe plajă", "1.200–2.000 lei", "4–8h", "Cupluri, organizatori evenimente"],
           ["Spot publicitar complet", "2.000–3.500 lei", "1 zi", "Branduri, campanii social media"],
@@ -234,7 +234,7 @@ export const filmariMamaiaArticol: BlogArticle = {
     {
       question: "Cât costă o filmare cu dronă în Mamaia?",
       answer:
-        "Imobiliare: 450–650 lei. Evenimente și nunți: 1.200–2.000 lei. Marketing HoReCa: 1.500–2.500 lei. Prețurile includ autorizații CAA, asigurare și montaj de bază. Vezi tabelul complet din articol.",
+        "Imobiliare: de la 500 lei. Evenimente și nunți: 1.200–2.000 lei. Marketing HoReCa: 1.500–2.500 lei. Prețurile includ autorizații CAA, asigurare și montaj de bază. Vezi tabelul complet din articol.",
     },
     {
       question: "Pot filma cu drona pe plaja din Mamaia?",

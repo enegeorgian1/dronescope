@@ -40,7 +40,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-5xl px-6 text-center">
         {/* Static above-the-fold copy — no JS animation delay (improves LCP) */}
         <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-1.5 text-xs tracking-[2.5px] mb-8 backdrop-blur-sm">
-          FILMĂRI CU DRONĂ • CONSTANȚA & LITORAL • PESTE 10 ANI
+          FILMĂRI CU DRONĂ • CONSTANȚA & LITORAL • DE PESTE 10 ANI
         </div>
 
         <h1 className="mb-6 text-white">
